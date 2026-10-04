@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Site pro seu salão | InkSites</title>
+<meta name="description" content="Site profissional pro seu salão, com serviços, preços, fotos, avaliações e botão de agendar. Você vê a prévia pronta antes de pagar.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="O site do seu salão, pronto antes de você pagar">
+<meta property="og:description" content="Serviços, preços, fotos, avaliações e botão de agendar. Domínio, hospedagem e alterações inclusos.">
+<meta property="og:image" content="https://inksites.github.io/salao/capa.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232A2124'/%3E%3Crect x='20' y='14' width='9' height='34' fill='%23FFF'/%3E%3Crect x='34' y='37' width='12' height='12' rx='4' fill='%23E8B4BC'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap">
+<style>
+:root{
+  --bg:#FBF6F3; --surface:#FFFFFF; --ink:#2A2124; --muted:#6E5F63; --line:#EEDFDA;
+  --rose:#B76E79; --rose-deep:#8E4F5A; --rose-soft:#F6E4E4; --wa:#1F9D55;
+  --display:'Space Grotesk',ui-sans-serif,system-ui,sans-serif; --body:'Manrope',ui-sans-serif,system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--body)}
+.wrap{max-width:680px;margin:0 auto;padding-inline:20px;padding-block:20px 120px;display:flex;flex-direction:column;gap:56px}
+h1,h2,h3{font-family:var(--display);margin:0;text-wrap:balance;letter-spacing:-.01em}
+h1{font-size:clamp(34px,8vw,50px);line-height:1.05}
+h1 em,h2 em{font-style:normal;color:var(--rose)}
+h2{font-size:clamp(26px,6vw,34px);line-height:1.15}
+h3{font-size:19px}
+p{margin:0}
+section{display:flex;flex-direction:column;gap:18px}
+.topo{display:flex;justify-content:space-between;align-items:center}
+.marca{font:600 22px var(--display);color:var(--ink);text-decoration:none}
+.marca span{color:var(--rose)}
+.selo{font:600 13px var(--body);color:var(--rose-deep);background:var(--rose-soft);padding:6px 12px;border-radius:999px}
+.lead{font-size:19px;color:var(--muted)}
+.video{position:relative;align-self:center;width:min(100%,360px);aspect-ratio:9/16;border-radius:28px;overflow:hidden;background:#2A2124;box-shadow:0 30px 60px rgba(90,40,50,.22)}
+.video video{width:100%;height:100%;display:block;object-fit:cover}
+.video-nota{text-align:center;font-size:14px;color:var(--muted)}
+.inclui{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.inclui div{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px;display:flex;gap:12px;align-items:flex-start;min-width:0}
+.inclui svg{flex:none;margin-top:2px}
+.inclui b{display:block;font-family:var(--display);font-size:17px}
+.inclui span{font-size:14px;color:var(--muted);line-height:1.45}
+.passos{display:flex;flex-direction:column;gap:12px;counter-reset:p}
+.passo{display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px}
+.passo::before{counter-increment:p;content:counter(p);width:44px;height:44px;border-radius:50%;background:var(--rose);color:#fff;display:flex;align-items:center;justify-content:center;font:700 20px var(--display)}
+.passo p{color:var(--muted);font-size:15px}
+.planos{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.plano{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:20px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.plano.destaque{border:2px solid var(--rose)}
+.plano .preco{font:700 38px var(--display);color:var(--ink);font-variant-numeric:tabular-nums}
+.plano .preco small{font:600 15px var(--body);color:var(--muted)}
+.plano ul{margin:0;padding-left:18px;font-size:15px;color:var(--muted)}
+.plano .criacao{font-size:14px;color:var(--muted);border-top:1px solid var(--line);padding-top:10px}
+.fundador{background:var(--rose-soft);border-radius:16px;padding:16px 18px;color:var(--rose-deep);font-weight:600}
+.obs{font-size:14px;color:var(--muted)}
+details{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:0 18px}
+summary{cursor:pointer;font:600 17px var(--display);padding:16px 0;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--rose);font-size:22px;line-height:1}
+details[open] summary::after{content:"–"}
+details p{padding-bottom:16px;color:var(--muted)}
+.faq{display:flex;flex-direction:column;gap:10px}
+.cta{display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center;background:var(--ink);color:#fff;border-radius:22px;padding:30px 22px}
+.cta h2{color:#fff}
+.cta p{color:#E9DCDF}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--rose);color:#fff;text-decoration:none;font:700 17px var(--body);padding:16px 24px;border-radius:14px;min-height:52px}
+.btn:hover{background:var(--rose-deep)}
+.barra{position:fixed;left:0;right:0;bottom:0;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));background:rgba(251,246,243,.94);backdrop-filter:blur(8px);border-top:1px solid var(--line);display:flex;justify-content:center;z-index:5}
+.barra .btn{width:min(100%,460px);justify-content:center}
+a:focus-visible,summary:focus-visible,video:focus-visible{outline:3px solid var(--rose);outline-offset:3px;border-radius:8px}
+footer{text-align:center;font-size:14px;color:var(--muted)}
+footer a{color:var(--rose-deep)}
+@media (max-width:540px){.inclui,.planos{grid-template-columns:1fr}}
+
+.planos-tab{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.pt-plano{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px 20px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.pt-destaque{border:2px solid var(--rose)}
+.pt-selo{position:absolute;top:-12px;left:18px;background:var(--rose);color:#fff;font:700 12px var(--body);letter-spacing:.04em;text-transform:uppercase;padding:4px 10px;border-radius:999px}
+.pt-plano h3{font-size:20px}
+.pt-preco{font:700 42px var(--display);color:var(--ink);font-variant-numeric:tabular-nums;line-height:1}
+.pt-preco small{font:600 16px var(--body);color:var(--muted);margin-left:4px}
+.pt-entrada{font-size:15px;font-weight:600;color:var(--rose-deep)}
+.pt-plano ul{margin:6px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:16px}
+.pt-regras{display:flex;flex-direction:column;gap:8px;font-size:15px;color:var(--muted)}
+.pt-regras b{color:var(--ink)}
+@media (max-width:560px){.planos-tab{grid-template-columns:1fr;gap:20px}}
+.pagamento{background:var(--rose-soft);border-radius:18px;padding:18px 20px;display:flex;flex-direction:column;gap:8px}.pagamento h3{color:var(--rose-deep)}.pagamento ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="topo">
+    <a class="marca" href="https://inksites.github.io/">Ink<span>.</span>Sites</a>
+    <span class="selo">Pra salão de beleza</span>
+  </header>
+
+  <section>
+    <h1>O site do seu salão, <em>pronto antes de você pagar</em></h1>
+    <p class="lead">Serviços, preços, fotos, avaliações e o botão de agendar, num endereço próprio no nome do salão. A gente monta e cuida de tudo; você não mexe em nada.</p>
+  </section>
+
+  <section>
+    <div class="video">
+      <video controls playsinline preload="metadata" poster="capa.jpg" aria-label="Vídeo de 1 minuto e 39 segundos explicando como funciona">
+        <source src="como-funciona.mp4" type="video/mp4">
+      </video>
+    </div>
+    <p class="video-nota">Como funciona, em 1 minuto e meio. Tem legenda na tela, dá pra ver sem som.</p>
+  </section>
+
+  <section>
+    <h2>O que vem no site</h2>
+    <div class="inclui">
+      <div><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--rose)" stroke-width="1.9" stroke-linejoin="round"><path d="M3 12V4h8l10 10-8 8L3 12z"/><circle cx="7.5" cy="7.5" r="1.5" fill="var(--rose)"/></svg><p><b>Serviços e preços</b><span>a cliente vê antes de perguntar</span></p></div>
+      <div><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--rose)" stroke-width="1.9" stroke-linejoin="round"><rect x="3" y="6" width="18" height="14" rx="3"/><circle cx="12" cy="13" r="4"/><path d="M8 6l2-3h4l2 3"/></svg><p><b>Fotos dos trabalhos</b><span>as suas, do Instagram ou novas</span></p></div>
+      <div><svg width="26" height="26" viewBox="0 0 24 24" fill="var(--rose)"><path d="M12 2l3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg><p><b>Avaliações do Google</b><span>a nota que vocês já têm, em destaque</span></p></div>
+      <div><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--rose)" stroke-width="1.9" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4M8 15l3 3 5-5"/></svg><p><b>Botão de agendar</b><span>direto no WhatsApp ou na sua agenda</span></p></div>
+      <div><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--rose)" stroke-width="1.9" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><p><b>Mapa e horário</b><span>como chegar e quando atende</span></p></div>
+      <div><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--rose)" stroke-width="1.9" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="M2 9h20"/></svg><p><b>Endereço próprio</b><span>ex.: seusalao.com.br, no seu nome</span></p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Como funciona</h2>
+    <div class="passos">
+      <div class="passo"><div><h3>A gente monta uma prévia</h3><p>Com as informações e as fotos do seu salão. Sem custo pra ver.</p></div></div>
+      <div class="passo"><div><h3>Você olha no celular e pede ajustes</h3><p>Troca foto, cor, preço ou texto até ficar do seu jeito.</p></div></div>
+      <div class="passo"><div><h3>Aprovou, o site vai pro ar</h3><p>No domínio do salão. A partir daí, qualquer mudança é só mandar mensagem.</p></div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Quanto custa</h2>
+    <div class="planos-tab" role="table" aria-label="Planos">
+      <div class="pt-plano">
+        <h3>Essencial</h3>
+        <div class="pt-preco">R$ 89<small>/mês</small></div>
+        <p class="pt-entrada">Pra entrar: 3 meses juntos, R$ 267</p>
+        <ul>
+          <li>Site com serviços, preços, fotos, mapa e botão do WhatsApp</li>
+          <li>Endereço próprio (tipo <i>salaodaana.com.br</i>)</li>
+          <li>2 atualizações por mês</li>
+        </ul>
+      </div>
+      <div class="pt-plano pt-destaque">
+        <span class="pt-selo">Mais indicado</span>
+        <h3>Profissional</h3>
+        <div class="pt-preco">R$ 129<small>/mês</small></div>
+        <p class="pt-entrada">Pra entrar: 3 meses juntos, R$ 387</p>
+        <ul>
+          <li>Tudo do Essencial</li>
+          <li><b>Perfil no Google Maps</b> configurado</li>
+          <li>4 atualizações por mês</li>
+        </ul>
+      </div>
+    </div>
+    <div class="pt-regras">
+      <div class="pagamento"><h3>Como funciona o pagamento</h3><ul><li><b>Sem taxa de criação.</b> Você não paga nada pra montar o site.</li><li><b>Só paga quando aprovar.</b> A prévia e até 2 rodadas de ajustes são sem custo.</li><li><b>Na entrada:</b> os 3 primeiros meses juntos, quando o site vai pro ar.</li><li><b>Depois:</b> mês a mês.</li><li><b>Cancelamento sem multa:</b> se quiser parar, o site sai do ar e você não paga mais nada. O endereço do site continua no seu nome.</li></ul></div>
+      <p><b>Atualização</b> = uma lista de mudanças mandada de uma vez (preços, horários, textos ou fotos). Fica pronta em até 2 dias úteis. Atualização a mais no mês: R$ 30.</p>
+      <p><b>Não está incluso:</b> posts e artes pro Instagram, logo, anúncios, loja virtual e fotos.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Dúvidas comuns</h2>
+    <div class="faq">
+      <details><summary>Já tenho Instagram. Pra que site?</summary><p>Quem procura salão no Google encontra site e Google Maps, não perfil de Instagram. No site, preço, horário e endereço ficam à mão, e o direct recebe menos pergunta repetida.</p></details>
+      <details><summary>Preciso entender de site ou mexer em alguma coisa?</summary><p>Não. Quer mudar algo, manda mensagem que a gente atualiza.</p></details>
+      <details><summary>O endereço do site fica no meu nome?</summary><p>Sim. Ele é registrado no CPF ou CNPJ do salão e é seu.</p></details>
+      <details><summary>Pago alguma coisa antes de ver o site?</summary><p>Não. A gente monta a prévia, você pede até 2 rodadas de ajustes, e só paga quando aprovar e o site for pro ar.</p></details>
+      <details><summary>E se eu quiser cancelar depois?</summary><p>Pode cancelar quando quiser, sem multa. O site sai do ar e você não paga mais nada. Os meses já pagos não são devolvidos, e o endereço do site continua no seu nome.</p></details>
+      <details><summary>Vocês garantem que vou aparecer em primeiro no Google?</summary><p>Ninguém pode garantir isso de forma honesta. O site e o perfil no Google deixam o salão mais fácil de achar e ajudam quem já achou a decidir.</p></details>
+      <details><summary>Atende salão de fora de João Pessoa?</summary><p>Sim. É tudo online, pra qualquer cidade.</p></details>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Quer ver a prévia do seu salão?</h2>
+    <p>Manda o @ do salão no direct. A gente monta e te mostra, sem compromisso.</p>
+    <a class="btn" href="https://ig.me/m/inksites.br" target="_blank" rel="noopener">Pedir minha prévia</a>
+  </section>
+
+  <footer>InkSites · <a href="https://inksites.github.io/">inksites.github.io</a> · @inksites.br</footer>
+</div>
+
+<div class="barra"><a class="btn" href="https://ig.me/m/inksites.br" target="_blank" rel="noopener">Pedir a prévia do meu salão</a></div>
+</body>
+</html>
