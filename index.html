@@ -36,7 +36,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Oswald:wght@500;600;700&family=Oswald:wght@500;600;700&family=Space+Grotesk:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
     --navy:#16181D;
@@ -375,6 +375,41 @@
     .reveal{opacity:1; transform:none; transition:none;}
     .line-divider path{stroke-dashoffset:0; transition:none;}
   }
+/* === TEMA VITRINE 05-10-2026 (escuro, estilo dos modelos de estética automotiva) === */
+:root{--navy:#F2F2F0;--navy-2:#E0E0DC;--ice:#0B0C0E;--paper:#16181C;--slate:#A3A6AD;--slate-soft:#80838B;--line:#24272D;--line-strong:#33373F;--blue:#F2A93B;--blue-deep:#F2A93B;--display:'Oswald',Impact,sans-serif}
+body{background:radial-gradient(1100px 700px at 85% -10%,rgba(242,169,59,.10),transparent 60%),var(--ice)}
+header.site{background:rgba(11,12,14,.82)!important;backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+h1,h2,.final-cta h2{font-family:var(--display);text-transform:uppercase;letter-spacing:.01em;line-height:1.02}
+h1{font-size:clamp(2.8rem,6.4vw,5.4rem)}
+h2{font-size:clamp(2rem,4.6vw,3.3rem)}
+.accent,h2 em{background:linear-gradient(90deg,#F2A93B,#E0761E);-webkit-background-clip:text;background-clip:text;color:transparent;font-style:normal}
+.nav-cta,.btn-primary{background:linear-gradient(90deg,#F2A93B,#E0761E)!important;color:#111!important;border-radius:8px;box-shadow:0 12px 30px rgba(242,140,40,.25)}
+.btn-ghost{color:var(--navy);border-color:var(--line-strong)}
+.founder .pill{background:#F2A93B;color:#111}
+.plans-grid{gap:18px;background:transparent;border:0}
+.plan-card{border:1px solid var(--line);border-radius:16px}
+.plan-card.is-featured{background:#1B1510;border-color:rgba(242,169,59,.55)}
+.is-featured .plan-cta,.plan-cta:hover{background:linear-gradient(90deg,#F2A93B,#E0761E);color:#111;border-color:transparent}
+.plan-cta{border-radius:8px}
+.proof-panel{background:var(--paper);border:1px solid var(--line)}
+.mdl{border-radius:18px}
+.mdl:hover{box-shadow:0 22px 46px rgba(0,0,0,.5)}
+.mdl-abas button{background:var(--paper)!important;color:var(--navy)!important;border-color:var(--line-strong)!important}
+.mdl-abas button[aria-selected="true"]{background:linear-gradient(90deg,#F2A93B,#E0761E)!important;color:#111!important;border-color:transparent!important}
+.mdl-tela{border-color:#000!important}
+.mdl-plano,.mdl-abrir{color:#F2A93B!important}
+/* celulares na abertura */
+.hero .wrap{position:relative}
+.hero h1,.hero-sub{max-width:15ch}
+.hero-sub{max-width:44ch}
+.hero-telas{position:absolute;right:28px;top:10px;width:440px;height:560px;pointer-events:none}
+.hero-telas img{position:absolute;width:230px;border-radius:30px;border:7px solid #000;box-shadow:0 30px 60px rgba(0,0,0,.6),0 0 0 1px rgba(255,255,255,.06)}
+.hero-telas .t1{left:0;top:70px;transform:rotate(-8deg);opacity:.85}
+.hero-telas .t2{left:105px;top:0;z-index:2}
+.hero-telas .t3{left:210px;top:90px;transform:rotate(8deg);opacity:.85}
+@media (max-width:1100px){.hero-telas{position:relative;right:auto;top:auto;width:100%;max-width:440px;height:520px;margin:40px auto 0}.hero h1{max-width:none}}
+@media (max-width:480px){.hero-telas{height:370px;margin-top:28px}.hero-telas img{width:180px}.hero-telas .t2{left:calc(50% - 90px)}.hero-telas .t1{left:0}.hero-telas .t3{left:auto;right:0}}
+/* === FIM TEMA VITRINE === */
 </style>
 </head>
 <body>
@@ -389,6 +424,7 @@
 <main>
 <section class="hero">
   <div class="wrap">
+    
     <div class="eyebrow">Sites profissionais para negócios de atendimento</div>
     <h1 class="reveal">O site que faz o cliente <span class="accent">decidir</span> antes de te conhecer.</h1>
     <p class="hero-sub reveal">Sites rápidos e diretos ao ponto para negócios locais (estéticas automotivas, salões, studios de sobrancelha, clínicas, lojas) que querem ser a primeira escolha de quem procura no Google. E você vê o seu pronto <strong>antes de pagar qualquer coisa</strong>.</p>
@@ -396,6 +432,8 @@
       <a class="btn-primary" href="https://ig.me/m/inksites.br" target="_blank" rel="noopener">Quero ver meu rascunho →</a>
       <a class="btn-ghost" href="#projetos">Ver modelos</a>
     </div>
+    
+    <div class="hero-telas" aria-hidden="true"><img class="t1" src="modelos/studio-lirio.webp" alt=""><img class="t2" src="modelos/estetica-automotiva-premium.webp" alt=""><img class="t3" src="modelos/studio-onix.webp" alt=""></div><!--telas-->
     <div class="hero-meta reveal">
       <div><strong>Rascunho grátis</strong>você vê antes de fechar</div>
       <div><strong>Tudo incluso</strong>domínio, hospedagem e manutenção</div>
