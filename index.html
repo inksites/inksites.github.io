@@ -41,8 +41,8 @@
   :root{
     --navy:#16181D;
     --navy-2:#1F2229;
-    --blue:#E3A23C;
-    --blue-deep:#C4841F;
+    --blue:#6FA8FF;
+    --blue-deep:#3B6FE0;
     --ice:#F7F4EE;
     --paper:#FFFFFF;
     --slate:#63605A;
@@ -213,13 +213,13 @@
   .founder strong{color:var(--navy);}
   .founder .pill{
     font-family:var(--mono); font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase;
-    background:var(--navy); color:#F0C878; padding:5px 10px; border-radius:2px; white-space:nowrap;
+    background:var(--navy); color:#A9CBFF; padding:5px 10px; border-radius:2px; white-space:nowrap;
   }
   .plans-grid{margin-top:24px; display:grid; grid-template-columns:repeat(2, 1fr); gap:1px; background:var(--line-strong); border:1px solid var(--line-strong);}
   .plan-card{background:var(--paper); padding:40px 36px; display:flex; flex-direction:column;}
   .plan-card.is-featured{background:var(--navy);}
   .plan-num{font-family:var(--mono); font-size:0.74rem; color:var(--blue-deep); letter-spacing:0.06em;}
-  .is-featured .plan-num{color:#F0C878;}
+  .is-featured .plan-num{color:#A9CBFF;}
   .plan-card h3{font-family:var(--display); font-weight:600; font-size:1.5rem; margin:12px 0 6px; color:var(--navy);}
   .is-featured h3{color:#fff;}
   .plan-tag{font-size:0.9rem; color:var(--slate); margin-bottom:22px;}
@@ -237,7 +237,7 @@
   .is-featured .plan-list{color:#DAD4C6;}
   .plan-list li{padding-left:18px; position:relative; line-height:1.45;}
   .plan-list li::before{content:'—'; position:absolute; left:0; color:var(--blue);}
-  .is-featured .plan-list li::before{color:#F0C878;}
+  .is-featured .plan-list li::before{color:#A9CBFF;}
   .plan-cta{
     margin-top:28px; text-align:center; font-family:var(--mono); font-size:0.78rem; letter-spacing:0.05em;
     text-transform:uppercase; text-decoration:none; padding:14px 18px; border-radius:2px;
@@ -245,7 +245,7 @@
   }
   .plan-cta:hover{background:var(--navy); color:var(--ice);}
   .is-featured .plan-cta{background:var(--blue); border-color:var(--blue); color:var(--navy); font-weight:600;}
-  .is-featured .plan-cta:hover{background:#F0C878;}
+  .is-featured .plan-cta:hover{background:#A9CBFF;}
   .plans-note{margin-top:26px; font-size:0.82rem; color:var(--slate-soft); text-align:center; font-family:var(--mono); line-height:1.7;}
 
   /* ---------- process ---------- */
@@ -272,10 +272,10 @@
   .proof-panel .section-lede{color:#DAD4C6;}
   .proof-stats{display:grid; grid-template-columns:1fr 1fr; gap:28px; margin-top:28px;}
   .proof-stats div strong{display:block; font-family:var(--display); font-size:1.5rem; color:#fff; margin-bottom:4px;}
-  .proof-stats div span{font-family:var(--mono); font-size:0.74rem; color:#F0C878; text-transform:uppercase; letter-spacing:0.05em;}
+  .proof-stats div span{font-family:var(--mono); font-size:0.74rem; color:#A9CBFF; text-transform:uppercase; letter-spacing:0.05em;}
   .proof-link{
     margin-top:30px; display:inline-flex; align-items:center; gap:8px; font-family:var(--mono);
-    font-size:0.82rem; color:#F0C878; text-decoration:none; border-bottom:1px solid rgba(240,200,120,0.35); padding-bottom:2px;
+    font-size:0.82rem; color:#A9CBFF; text-decoration:none; border-bottom:1px solid rgba(240,200,120,0.35); padding-bottom:2px;
   }
   .proof-visual{background:var(--blue); border-radius:3px; aspect-ratio:4/5; display:flex; flex-direction:column; justify-content:space-between; padding:26px; color:var(--navy);}
   .proof-visual .tag{font-family:var(--mono); font-size:0.7rem; text-transform:uppercase; letter-spacing:0.08em;}
@@ -297,10 +297,10 @@
   .portfolio-preview{padding:52px 30px; text-align:center; flex:1;}
   .portfolio-preview.dark{background:var(--navy); color:#fff;}
   .portfolio-preview.light{background:#F4EFE6; color:var(--navy);}
-  .portfolio-preview .kicker{font-family:var(--mono); font-size:0.72rem; letter-spacing:0.1em; text-transform:uppercase; color:#F0C878;}
+  .portfolio-preview .kicker{font-family:var(--mono); font-size:0.72rem; letter-spacing:0.1em; text-transform:uppercase; color:#A9CBFF;}
   .portfolio-preview.light .kicker{color:var(--blue-deep);}
   .portfolio-preview h3{font-family:var(--display); font-weight:600; font-size:clamp(1.4rem, 2.4vw, 1.8rem); margin-top:14px; line-height:1.15;}
-  .portfolio-preview h3 em{font-style:normal; font-weight:700; color:#F0C878;}
+  .portfolio-preview h3 em{font-style:normal; font-weight:700; color:#A9CBFF;}
   .portfolio-preview.light h3 em{color:var(--blue-deep);}
   .portfolio-preview p{margin-top:12px; font-size:0.92rem; max-width:40ch; margin-left:auto; margin-right:auto; opacity:.8;}
   .portfolio-footer{
@@ -376,39 +376,40 @@
     .line-divider path{stroke-dashoffset:0; transition:none;}
   }
 /* === TEMA VITRINE 05-10-2026 (escuro, estilo dos modelos de estética automotiva) === */
-:root{--navy:#F2F2F0;--navy-2:#E0E0DC;--ice:#0B0C0E;--paper:#16181C;--slate:#A3A6AD;--slate-soft:#80838B;--line:#24272D;--line-strong:#33373F;--blue:#F2A93B;--blue-deep:#F2A93B;--display:'Oswald',Impact,sans-serif}
-body{background:radial-gradient(1100px 700px at 85% -10%,rgba(242,169,59,.10),transparent 60%),var(--ice)}
+:root{--navy:#F2F2F0;--navy-2:#E0E0DC;--ice:#0B0C0E;--paper:#16181C;--slate:#A3A6AD;--slate-soft:#80838B;--line:#24272D;--line-strong:#33373F;--blue:#6FA8FF;--blue-deep:#6FA8FF;--display:'Oswald',Impact,sans-serif}
+body{background:radial-gradient(1100px 700px at 85% -10%,rgba(111,168,255,.10),transparent 60%),var(--ice)}
 header.site{background:rgba(11,12,14,.82)!important;backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 h1,h2,.final-cta h2{font-family:var(--display);text-transform:uppercase;letter-spacing:.01em;line-height:1.02}
 h1{font-size:clamp(2.8rem,6.4vw,5.4rem)}
 h2{font-size:clamp(2rem,4.6vw,3.3rem)}
-.accent,h2 em{background:linear-gradient(90deg,#F2A93B,#E0761E);-webkit-background-clip:text;background-clip:text;color:transparent;font-style:normal}
-.nav-cta,.btn-primary{background:linear-gradient(90deg,#F2A93B,#E0761E)!important;color:#111!important;border-radius:8px;box-shadow:0 12px 30px rgba(242,140,40,.25)}
+.accent,h2 em{background:linear-gradient(90deg,#6FA8FF,#3B6FE0);-webkit-background-clip:text;background-clip:text;color:transparent;font-style:normal}
+.nav-cta,.btn-primary{background:linear-gradient(90deg,#6FA8FF,#3B6FE0)!important;color:#111!important;border-radius:8px;box-shadow:0 12px 30px rgba(59,111,224,.25)}
 .btn-ghost{color:var(--navy);border-color:var(--line-strong)}
-.founder .pill{background:#F2A93B;color:#111}
+.founder .pill{background:#6FA8FF;color:#111}
 .plans-grid{gap:18px;background:transparent;border:0}
 .plan-card{border:1px solid var(--line);border-radius:16px}
-.plan-card.is-featured{background:#1B1510;border-color:rgba(242,169,59,.55)}
-.is-featured .plan-cta,.plan-cta:hover{background:linear-gradient(90deg,#F2A93B,#E0761E);color:#111;border-color:transparent}
+.plan-card.is-featured{background:#0F1626;border-color:rgba(111,168,255,.55)}
+.is-featured .plan-cta,.plan-cta:hover{background:linear-gradient(90deg,#6FA8FF,#3B6FE0);color:#111;border-color:transparent}
 .plan-cta{border-radius:8px}
 .proof-panel{background:var(--paper);border:1px solid var(--line)}
 .mdl{border-radius:18px}
 .mdl:hover{box-shadow:0 22px 46px rgba(0,0,0,.5)}
 .mdl-abas button{background:var(--paper)!important;color:var(--navy)!important;border-color:var(--line-strong)!important}
-.mdl-abas button[aria-selected="true"]{background:linear-gradient(90deg,#F2A93B,#E0761E)!important;color:#111!important;border-color:transparent!important}
+.mdl-abas button[aria-selected="true"]{background:linear-gradient(90deg,#6FA8FF,#3B6FE0)!important;color:#111!important;border-color:transparent!important}
 .mdl-tela{border-color:#000!important}
-.mdl-plano,.mdl-abrir{color:#F2A93B!important}
+.mdl-plano,.mdl-abrir{color:#6FA8FF!important}
 /* celulares na abertura */
 .hero .wrap{position:relative}
-.hero h1,.hero-sub{max-width:15ch}
+.hero h1,.hero-sub{max-width:13ch}
 .hero-sub{max-width:44ch}
-.hero-telas{position:absolute;right:28px;top:10px;width:440px;height:560px;pointer-events:none}
-.hero-telas img{position:absolute;width:230px;border-radius:30px;border:7px solid #000;box-shadow:0 30px 60px rgba(0,0,0,.6),0 0 0 1px rgba(255,255,255,.06)}
-.hero-telas .t1{left:0;top:70px;transform:rotate(-8deg);opacity:.85}
-.hero-telas .t2{left:105px;top:0;z-index:2}
-.hero-telas .t3{left:210px;top:90px;transform:rotate(8deg);opacity:.85}
-@media (max-width:1100px){.hero-telas{position:relative;right:auto;top:auto;width:100%;max-width:440px;height:520px;margin:40px auto 0}.hero h1{max-width:none}}
-@media (max-width:480px){.hero-telas{height:370px;margin-top:28px}.hero-telas img{width:180px}.hero-telas .t2{left:calc(50% - 90px)}.hero-telas .t1{left:0}.hero-telas .t3{left:auto;right:0}}
+.hero-telas{position:absolute;right:-70px;top:40px;width:560px;height:560px;pointer-events:none}
+@media (max-width:1320px) and (min-width:1101px){.hero-telas{right:0;transform:scale(.8);transform-origin:right top}}
+.hero-telas img{position:absolute;bottom:0;aspect-ratio:480/854;object-fit:cover;border-radius:32px;border:7px solid #05070B;box-shadow:0 30px 60px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.07)}
+.hero-telas .t2{left:50%;transform:translateX(-50%);width:244px;z-index:2}
+.hero-telas .t1,.hero-telas .t3{width:196px;bottom:30px;filter:brightness(.8)}
+.hero-telas .t1{left:0}.hero-telas .t3{right:0}
+@media (max-width:1100px){.hero-telas{position:relative;right:auto;top:auto;width:100%;max-width:560px;height:540px;margin:40px auto 0}.hero h1{max-width:none}}
+@media (max-width:480px){.hero-telas{height:400px;margin-top:28px}.hero-telas .t2{width:186px}.hero-telas .t1,.hero-telas .t3{width:146px;bottom:20px}}
 /* === FIM TEMA VITRINE === */
 </style>
 </head>
@@ -433,7 +434,7 @@ h2{font-size:clamp(2rem,4.6vw,3.3rem)}
       <a class="btn-ghost" href="#projetos">Ver modelos</a>
     </div>
     
-    <div class="hero-telas" aria-hidden="true"><img class="t1" src="modelos/studio-lirio.webp" alt=""><img class="t2" src="modelos/estetica-automotiva-premium.webp" alt=""><img class="t3" src="modelos/studio-onix.webp" alt=""></div><!--telas-->
+    <div class="hero-telas" aria-hidden="true"><img class="t1" src="modelos/tela-lirio.webp" alt=""><img class="t2" src="modelos/tela-vertice.webp" alt=""><img class="t3" src="modelos/tela-onix.webp" alt=""></div><!--telas-->
     <div class="hero-meta reveal">
       <div><strong>Rascunho grátis</strong>você vê antes de fechar</div>
       <div><strong>Tudo incluso</strong>domínio, hospedagem e manutenção</div>
