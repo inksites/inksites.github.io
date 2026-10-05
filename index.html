@@ -410,10 +410,10 @@
     <h2 class="reveal">Veja um site do seu tipo de negócio.</h2>
     <p class="section-lede reveal">Negócios fictícios, feitos pra você ver como fica. No seu entram o seu nome, as suas fotos, os seus serviços e as suas cores. Abra no celular.</p>
     <div class="mdl-abas" role="tablist">
-      <button type="button" role="tab" aria-selected="true" data-aba="auto">Estética automotiva</button>
-      <button type="button" role="tab" aria-selected="false" data-aba="beleza">Sobrancelha e beleza</button>
+      <button type="button" role="tab" aria-selected="true" data-aba="beleza">Sobrancelha e beleza</button>
+      <button type="button" role="tab" aria-selected="false" data-aba="auto">Estética automotiva</button>
     </div>
-    <div class="mdl-grade" data-grupo="auto">
+    <div class="mdl-grade" data-grupo="auto" hidden>
         <a class="mdl" href="https://inksites.github.io/estetica-automotiva-modelo/" target="_blank" rel="noopener">
           <span class="mdl-tela"><img src="modelos/estetica-automotiva-modelo.webp" alt="Vértice Estética Automotiva" loading="lazy" width="480" height="861"></span>
           <span class="mdl-plano">Essencial · R$ 89/mês</span>
@@ -429,24 +429,24 @@
           <span class="mdl-abrir">Abrir o modelo →</span>
         </a>
     </div>
-    <div class="mdl-grade" data-grupo="beleza" hidden>
-        <a class="mdl" href="https://inksites.github.io/sobrancelha-premium/" target="_blank" rel="noopener">
-          <span class="mdl-tela"><img src="modelos/sobrancelha-premium.webp" alt="Studio Lírio escuro, capa em vídeo" loading="lazy" width="480" height="861"></span>
-          <span class="mdl-plano">Profissional · R$ 129/mês</span>
-          <strong>Studio Lírio · versão escura</strong>
-          <span class="mdl-txt">Capa em vídeo que anda conforme você rola, serviços com foto e avaliações.</span>
+    <div class="mdl-grade" data-grupo="beleza">
+        <a class="mdl" href="https://inksites.github.io/studio-lirio/" target="_blank" rel="noopener">
+          <span class="mdl-tela"><img src="modelos/studio-lirio.webp" alt="Studio Lírio, sobrancelha e maquiagem" loading="lazy" width="480" height="861"></span>
+          <span class="mdl-plano">Modelo premium · rosé</span>
+          <strong>Studio Lírio · sobrancelha e maquiagem</strong>
+          <span class="mdl-txt">Abre como um filme: o atendimento vai aparecendo conforme você rola. Preços, equipe, perguntas e agendamento no WhatsApp.</span>
           <span class="mdl-abrir">Abrir o modelo →</span>
         </a>
-        <a class="mdl" href="https://inksites.github.io/salao-modelo/" target="_blank" rel="noopener">
-          <span class="mdl-tela"><img src="modelos/salao-modelo.webp" alt="Studio Lírio · sobrancelha e maquiagem" loading="lazy" width="480" height="861"></span>
-          <span class="mdl-plano">Profissional · R$ 129/mês</span>
-          <strong>Studio Lírio · sobrancelha e maquiagem</strong>
-          <span class="mdl-txt">Capa em vídeo, serviços com preço e o cartão de QR pra avaliação no Google.</span>
+        <a class="mdl" href="https://inksites.github.io/studio-onix/" target="_blank" rel="noopener">
+          <span class="mdl-tela"><img src="modelos/studio-onix.webp" alt="Studio Ônix, preto e branco" loading="lazy" width="480" height="861" style="object-position:50% 85%"></span>
+          <span class="mdl-plano">Modelo premium · preto e branco</span>
+          <strong>Studio Ônix · preto e branco</strong>
+          <span class="mdl-txt">Visual de salão de luxo, com detalhes em dourado. Serviços em fotos, preços, depoimentos e perguntas.</span>
           <span class="mdl-abrir">Abrir o modelo →</span>
         </a>
         <a class="mdl" href="https://inksites.github.io/salao-modelo-elegante/" target="_blank" rel="noopener">
           <span class="mdl-tela"><img src="modelos/salao-modelo-elegante.webp" alt="Nácar · unhas" loading="lazy" width="480" height="861"></span>
-          <span class="mdl-plano">Essencial · R$ 89/mês</span>
+          <span class="mdl-plano">Modelo · unhas</span>
           <strong>Nácar · unhas</strong>
           <span class="mdl-txt">Visual delicado, preços na tela e agendamento no WhatsApp.</span>
           <span class="mdl-abrir">Abrir o modelo →</span>
@@ -459,6 +459,7 @@
 .mdl-abas button{font:600 15px/1 inherit;font-family:inherit;padding:12px 18px;border-radius:999px;border:1px solid var(--line-strong);background:var(--paper);color:var(--navy);cursor:pointer}
 .mdl-abas button[aria-selected="true"]{background:var(--navy);color:#fff;border-color:var(--navy)}
 .mdl-grade{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,320px));gap:22px}
+.mdl-grade[hidden]{display:none}
 .mdl{display:flex;flex-direction:column;gap:8px;text-decoration:none;color:var(--navy);background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:16px;transition:transform .2s,box-shadow .2s}
 .mdl:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(22,24,29,.12)}
 .mdl-tela{display:block;border-radius:12px;overflow:hidden;aspect-ratio:480/560;background:#111}
