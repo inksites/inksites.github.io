@@ -393,7 +393,11 @@ h2{font-size:clamp(2rem,4.6vw,3.3rem)}
 .plan-cta{border-radius:8px}
 .proof-panel{background:var(--paper);border:1px solid var(--line)}
 .mdl{border-radius:18px}
-.mdl:hover{box-shadow:0 22px 46px rgba(0,0,0,.5)}
+/* luz neon no cartao ao passar o mouse (segue o cursor) */
+.mdl-grade .mdl{position:relative;isolation:isolate;transition:transform .3s,box-shadow .3s,border-color .3s}
+.mdl-grade .mdl::before{content:"";position:absolute;inset:0;border-radius:inherit;z-index:-1;opacity:0;transition:opacity .35s;background:radial-gradient(420px circle at var(--mx,50%) var(--my,30%),rgba(111,168,255,.28),transparent 60%)}
+.mdl-grade .mdl:hover{border-color:rgba(111,168,255,.6);box-shadow:0 0 0 1px rgba(111,168,255,.35),0 0 30px rgba(111,168,255,.4),0 0 80px rgba(59,111,224,.25),0 24px 50px rgba(0,0,0,.5)}
+.mdl-grade .mdl:hover::before{opacity:1}
 .mdl-abas button{background:var(--paper)!important;color:var(--navy)!important;border-color:var(--line-strong)!important}
 .mdl-abas button[aria-selected="true"]{background:linear-gradient(90deg,#6FA8FF,#3B6FE0)!important;color:#111!important;border-color:transparent!important}
 .mdl-tela{border-color:#000!important}
@@ -701,5 +705,6 @@ h2{font-size:clamp(2rem,4.6vw,3.3rem)}
   });
 </script>
 
+<script>/* luz do cartao segue o mouse */document.querySelectorAll(".mdl").forEach(function(c){c.addEventListener("mousemove",function(e){var r=c.getBoundingClientRect();c.style.setProperty("--mx",(e.clientX-r.left)+"px");c.style.setProperty("--my",(e.clientY-r.top)+"px")})});</script>
 </body>
 </html>
