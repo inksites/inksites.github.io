@@ -411,6 +411,8 @@ h2{font-size:clamp(2.2rem,4.8vw,3.5rem)}
 .hero h1{max-width:12ch}
 .hero-sub{max-width:46ch}
 @media (max-width:860px){.hero::before{opacity:.3;background-position:30% center}.hero::after{background:linear-gradient(180deg,rgba(255,247,248,.8) 0%,rgba(255,247,248,.88) 50%,var(--ice) 100%)}.hero h1{max-width:none}}
+.mdl-grade{grid-template-columns:repeat(3,minmax(0,1fr))!important;max-width:none!important}
+@media (max-width:900px){.mdl-grade{grid-template-columns:1fr!important;max-width:420px!important}}
 /* === FIM TEMA BELEZA === */
 </style>
 </head>
@@ -473,7 +475,8 @@ h2{font-size:clamp(2.2rem,4.8vw,3.5rem)}
   </div>
 </section>
 <style>
-.mdl-grade{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px;margin-top:34px}
+.mdl-grade{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px;margin-top:34px}
+@media (max-width:1180px) and (min-width:901px){.mdl-grade{grid-template-columns:repeat(2,minmax(0,1fr));max-width:760px}}
 .mdl{display:flex;flex-direction:column;gap:8px;text-decoration:none;color:var(--navy);background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:18px 18px 22px;transition:transform .25s,box-shadow .25s}
 .mdl:hover{transform:translateY(-4px);box-shadow:0 22px 46px rgba(22,24,29,.14)}
 .mdl-tela{display:block;aspect-ratio:480/560;border-radius:22px;overflow:hidden;background:#111;border:7px solid #16181D;box-shadow:0 10px 24px rgba(22,24,29,.18);margin-bottom:8px}
