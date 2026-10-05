@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>InkSites Beleza — site pra salão, sobrancelha e maquiagem</title>
+<meta name="description" content="Site por assinatura pra salão de beleza, studio de sobrancelha, maquiadora e nail designer. Você vê o site pronto antes de pagar. Sem taxa de criação.">
+<link rel="canonical" href="https://inksites.github.io/beleza/">
+<meta name="theme-color" content="#16181D">
+
+<!-- prévia do link (WhatsApp, Instagram, Facebook) -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="InkSites">
+<meta property="og:title" content="InkSites — o site do seu salão, pronto antes de você pagar">
+<meta property="og:description" content="Site profissional por assinatura para negócios de atendimento em todo o Brasil, 100% online. Rascunho grátis, domínio e manutenção inclusos.">
+<meta property="og:url" content="https://inksites.github.io/beleza/">
+<meta property="og:image" content="https://inksites.github.io/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2316181D'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial,sans-serif' font-weight='700' font-size='34' fill='%23F7F4EE'%3EI%3Ctspan fill='%23E3A23C'%3E.%3C/tspan%3E%3C/text%3E%3C/svg%3E">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "InkSites",
+  "url": "https://inksites.github.io/",
+  "description": "Criação e manutenção de sites por assinatura para negócios locais de atendimento.",
+  "areaServed": {"@type": "Country", "name": "Brasil"},
+  "sameAs": ["https://www.instagram.com/inksites.br/"]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Oswald:wght@500;600;700&family=Oswald:wght@500;600;700&family=Space+Grotesk:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#16181D;
+    --navy-2:#1F2229;
+    --blue:#6FA8FF;
+    --blue-deep:#3B6FE0;
+    --ice:#F7F4EE;
+    --paper:#FFFFFF;
+    --slate:#63605A;
+    --slate-soft:#96928A;
+    --line:#E7E2D8;
+    --line-strong:#D4CDBF;
+
+    --display:'Space Grotesk', sans-serif;
+    --body:'Manrope', sans-serif;
+    --mono:'IBM Plex Mono', monospace;
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--ice);
+    color:var(--navy);
+    font-family:var(--body);
+    line-height:1.5;
+    overflow-x:hidden;
+  }
+  img{max-width:100%; display:block;}
+  a{color:inherit;}
+  .wrap{max-width:1120px; margin:0 auto; padding:0 28px;}
+
+  /* ---------- nav ---------- */
+  header.site{
+    position:fixed; top:0; left:0; right:0; z-index:40;
+    background:rgba(247,244,238,0.88);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:18px 28px;
+    max-width:1120px; margin:0 auto;
+  }
+  .brand{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:1.15rem;
+    letter-spacing:0.01em;
+    color:var(--navy);
+    text-decoration:none;
+  }
+  .brand span{color:var(--blue);}
+  .nav-cta{
+    font-family:var(--mono);
+    font-size:0.74rem;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    background:var(--navy);
+    color:var(--ice);
+    padding:11px 20px;
+    border-radius:2px;
+    text-decoration:none;
+    transition:background .2s ease, transform .2s ease;
+    white-space:nowrap;
+  }
+  .nav-cta:hover{background:var(--blue); transform:translateY(-1px);}
+
+  /* ---------- hero ---------- */
+  .hero{padding:172px 0 100px; position:relative;}
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:0.76rem;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    color:var(--blue-deep);
+    display:flex; align-items:center; gap:10px;
+    margin-bottom:26px;
+  }
+  .eyebrow::before{content:''; width:26px; height:1px; background:var(--blue); display:inline-block;}
+  h1{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:clamp(2.3rem, 5.6vw, 4.3rem);
+    line-height:1.08;
+    letter-spacing:-0.01em;
+    max-width:15ch;
+    color:var(--navy);
+  }
+  h1 .accent{
+    color:var(--blue);
+    font-style:normal;
+    font-weight:700;
+  }
+  .hero-sub{
+    margin-top:26px;
+    font-size:1.12rem;
+    color:var(--slate);
+    max-width:50ch;
+    line-height:1.65;
+  }
+  .hero-actions{margin-top:38px; display:flex; gap:16px; flex-wrap:wrap; align-items:center;}
+  .btn-primary{
+    font-family:var(--mono);
+    font-size:0.84rem;
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+    background:var(--blue);
+    color:var(--navy);
+    font-weight:600;
+    padding:16px 30px;
+    border-radius:2px;
+    text-decoration:none;
+    display:inline-flex; align-items:center; gap:10px;
+    transition:background .2s ease, transform .2s ease;
+  }
+  .btn-primary:hover{background:var(--blue-deep); transform:translateY(-2px);}
+  .btn-ghost{
+    font-family:var(--mono);
+    font-size:0.84rem;
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+    color:var(--navy);
+    padding:16px 6px;
+    text-decoration:none;
+    border-bottom:1px solid var(--line-strong);
+    transition:border-color .2s ease;
+  }
+  .btn-ghost:hover{border-color:var(--navy);}
+  .hero-meta{
+    margin-top:64px;
+    display:flex; gap:44px; flex-wrap:wrap;
+    font-family:var(--mono); font-size:0.78rem; color:var(--slate-soft);
+  }
+  .hero-meta strong{
+    display:block; font-family:var(--body); font-weight:700; font-size:1.4rem; color:var(--navy);
+  }
+
+  /* ---------- line divider (signature) ---------- */
+  .line-divider{width:100%; height:1px; position:relative; overflow:visible;}
+  .line-divider svg{width:100%; height:60px; display:block; margin-top:-30px;}
+  .line-divider path{
+    fill:none; stroke:var(--blue); stroke-width:1.4;
+    stroke-dasharray:900; stroke-dashoffset:900;
+    transition:stroke-dashoffset 1.4s ease;
+  }
+  .line-divider.in path{stroke-dashoffset:0;}
+
+  /* ---------- section shell ---------- */
+  section{padding:108px 0; position:relative;}
+  .section-tag{
+    font-family:var(--mono); font-size:0.76rem; letter-spacing:0.14em;
+    text-transform:uppercase; color:var(--blue-deep); margin-bottom:18px;
+  }
+  h2{
+    font-family:var(--display); font-weight:600;
+    font-size:clamp(1.7rem, 3.4vw, 2.5rem);
+    line-height:1.14; max-width:22ch; color:var(--navy);
+  }
+  .section-lede{margin-top:20px; font-size:1.03rem; color:var(--slate); max-width:58ch; line-height:1.65;}
+
+  /* ---------- positioning ---------- */
+  .positioning-grid{margin-top:56px; display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--line);}
+  .pos-card{background:var(--ice); padding:34px 36px;}
+  .pos-card .num{font-family:var(--mono); color:var(--blue-deep); font-size:0.82rem;}
+  .pos-card h3{font-family:var(--display); font-weight:600; font-size:1.2rem; margin:14px 0 10px; color:var(--navy);}
+  .pos-card p{color:var(--slate); font-size:0.96rem; line-height:1.62;}
+
+  /* ---------- packages ---------- */
+  .founder{
+    margin-top:44px; display:flex; gap:14px; align-items:center; flex-wrap:wrap;
+    background:var(--paper); border:1px dashed var(--blue); border-radius:3px; padding:16px 22px;
+    font-size:0.93rem; color:var(--slate);
+  }
+  .founder strong{color:var(--navy);}
+  .founder .pill{
+    font-family:var(--mono); font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase;
+    background:var(--navy); color:#A9CBFF; padding:5px 10px; border-radius:2px; white-space:nowrap;
+  }
+  .plans-grid{margin-top:24px; display:grid; grid-template-columns:repeat(2, 1fr); gap:1px; background:var(--line-strong); border:1px solid var(--line-strong);}
+  .plan-card{background:var(--paper); padding:40px 36px; display:flex; flex-direction:column;}
+  .plan-card.is-featured{background:var(--navy);}
+  .plan-num{font-family:var(--mono); font-size:0.74rem; color:var(--blue-deep); letter-spacing:0.06em;}
+  .is-featured .plan-num{color:#A9CBFF;}
+  .plan-card h3{font-family:var(--display); font-weight:600; font-size:1.5rem; margin:12px 0 6px; color:var(--navy);}
+  .is-featured h3{color:#fff;}
+  .plan-tag{font-size:0.9rem; color:var(--slate); margin-bottom:22px;}
+  .is-featured .plan-tag{color:#C9C2B4;}
+  .plan-price{
+    color:var(--navy);
+    padding-bottom:18px; margin-bottom:20px; border-bottom:1px solid var(--line);
+  }
+  .plan-price .monthly{font-family:var(--display); font-size:2.2rem; font-weight:700; line-height:1;}
+  .plan-price .monthly small{font-family:var(--mono); font-size:0.85rem; font-weight:500; margin-left:4px;}
+  .plan-price .setup{display:block; font-family:var(--mono); font-size:0.76rem; color:var(--slate-soft); margin-top:8px;}
+  .is-featured .plan-price{color:#fff; border-bottom-color:rgba(255,255,255,0.16);}
+  .is-featured .plan-price .setup{color:#A9A294;}
+  .plan-list{list-style:none; font-size:0.93rem; color:var(--slate); display:flex; flex-direction:column; gap:11px; flex:1;}
+  .is-featured .plan-list{color:#DAD4C6;}
+  .plan-list li{padding-left:18px; position:relative; line-height:1.45;}
+  .plan-list li::before{content:'—'; position:absolute; left:0; color:var(--blue);}
+  .is-featured .plan-list li::before{color:#A9CBFF;}
+  .plan-cta{
+    margin-top:28px; text-align:center; font-family:var(--mono); font-size:0.78rem; letter-spacing:0.05em;
+    text-transform:uppercase; text-decoration:none; padding:14px 18px; border-radius:2px;
+    border:1px solid var(--navy); color:var(--navy); transition:background .2s ease, color .2s ease;
+  }
+  .plan-cta:hover{background:var(--navy); color:var(--ice);}
+  .is-featured .plan-cta{background:var(--blue); border-color:var(--blue); color:var(--navy); font-weight:600;}
+  .is-featured .plan-cta:hover{background:#A9CBFF;}
+  .plans-note{margin-top:26px; font-size:0.82rem; color:var(--slate-soft); text-align:center; font-family:var(--mono); line-height:1.7;}
+
+  /* ---------- process ---------- */
+  .process-track{margin-top:64px; display:grid; grid-template-columns:repeat(4, 1fr); gap:0; position:relative;}
+  .process-track::before{
+    content:''; position:absolute; top:13px; left:0; right:0; height:1px;
+    background-image:linear-gradient(90deg, var(--line-strong) 60%, transparent 0%);
+    background-size:14px 1px;
+  }
+  .process-step{padding-right:24px; position:relative;}
+  .process-dot{
+    width:26px; height:26px; border-radius:50%; background:var(--ice);
+    border:1.5px solid var(--blue); display:flex; align-items:center; justify-content:center;
+    font-family:var(--mono); font-size:0.68rem; color:var(--blue-deep); margin-bottom:22px; position:relative; z-index:1;
+  }
+  .process-step h3{font-family:var(--display); font-weight:600; font-size:1.08rem; margin-bottom:10px; color:var(--navy);}
+  .process-step p{font-size:0.9rem; color:var(--slate); line-height:1.55;}
+
+  /* ---------- proof ---------- */
+  .proof-panel{
+    margin-top:56px; display:grid; grid-template-columns:1.1fr 0.9fr; gap:56px; align-items:center;
+    background:var(--navy); border-radius:4px; padding:52px; color:#fff;
+  }
+  .proof-panel .section-lede{color:#DAD4C6;}
+  .proof-stats{display:grid; grid-template-columns:1fr 1fr; gap:28px; margin-top:28px;}
+  .proof-stats div strong{display:block; font-family:var(--display); font-size:1.5rem; color:#fff; margin-bottom:4px;}
+  .proof-stats div span{font-family:var(--mono); font-size:0.74rem; color:#A9CBFF; text-transform:uppercase; letter-spacing:0.05em;}
+  .proof-link{
+    margin-top:30px; display:inline-flex; align-items:center; gap:8px; font-family:var(--mono);
+    font-size:0.82rem; color:#A9CBFF; text-decoration:none; border-bottom:1px solid rgba(240,200,120,0.35); padding-bottom:2px;
+  }
+  .proof-visual{background:var(--blue); border-radius:3px; aspect-ratio:4/5; display:flex; flex-direction:column; justify-content:space-between; padding:26px; color:var(--navy);}
+  .proof-visual .tag{font-family:var(--mono); font-size:0.7rem; text-transform:uppercase; letter-spacing:0.08em;}
+  .proof-visual .big{font-family:var(--display); font-weight:600; font-size:2.5rem; line-height:1;}
+  .proof-visual .small{font-size:0.85rem;}
+
+  /* ---------- portfolio ---------- */
+  .portfolio-grid{margin-top:56px; display:grid; grid-template-columns:1fr 1fr; gap:28px;}
+  .portfolio-frame{
+    border:1px solid var(--line-strong); border-radius:8px;
+    overflow:hidden; background:var(--paper); display:flex; flex-direction:column;
+  }
+  .portfolio-bar{
+    display:flex; align-items:center; gap:8px; padding:12px 16px;
+    background:var(--ice); border-bottom:1px solid var(--line-strong);
+  }
+  .portfolio-dot{width:8px; height:8px; border-radius:50%; background:var(--line-strong);}
+  .portfolio-url{font-family:var(--mono); font-size:0.72rem; color:var(--slate-soft); margin-left:8px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+  .portfolio-preview{padding:52px 30px; text-align:center; flex:1;}
+  .portfolio-preview.dark{background:var(--navy); color:#fff;}
+  .portfolio-preview.light{background:#F4EFE6; color:var(--navy);}
+  .portfolio-preview .kicker{font-family:var(--mono); font-size:0.72rem; letter-spacing:0.1em; text-transform:uppercase; color:#A9CBFF;}
+  .portfolio-preview.light .kicker{color:var(--blue-deep);}
+  .portfolio-preview h3{font-family:var(--display); font-weight:600; font-size:clamp(1.4rem, 2.4vw, 1.8rem); margin-top:14px; line-height:1.15;}
+  .portfolio-preview h3 em{font-style:normal; font-weight:700; color:#A9CBFF;}
+  .portfolio-preview.light h3 em{color:var(--blue-deep);}
+  .portfolio-preview p{margin-top:12px; font-size:0.92rem; max-width:40ch; margin-left:auto; margin-right:auto; opacity:.8;}
+  .portfolio-footer{
+    padding:20px 30px; border-top:1px solid var(--line); display:flex; justify-content:space-between;
+    align-items:center; flex-wrap:wrap; gap:12px;
+  }
+  .portfolio-footer span{font-family:var(--mono); font-size:0.72rem; color:var(--slate-soft); text-transform:uppercase; letter-spacing:0.05em;}
+  .portfolio-link{
+    font-family:var(--mono); font-size:0.8rem; color:var(--blue-deep); text-decoration:none;
+    border-bottom:1px solid rgba(196,132,31,0.35); padding-bottom:2px; white-space:nowrap;
+  }
+  .portfolio-points{margin-top:28px; display:grid; grid-template-columns:repeat(4, 1fr); gap:24px;}
+  .portfolio-points div strong{display:block; font-family:var(--display); font-size:1.1rem; color:var(--navy); margin-bottom:4px;}
+  .portfolio-points div span{font-size:0.86rem; color:var(--slate);}
+
+  /* ---------- faq ---------- */
+  .faq-list{margin-top:48px; display:flex; flex-direction:column;}
+  .faq-item{border-top:1px solid var(--line); padding:26px 0;}
+  .faq-item:last-child{border-bottom:1px solid var(--line);}
+  .faq-q{
+    font-family:var(--display); font-weight:500; font-size:1.08rem; cursor:pointer;
+    display:flex; justify-content:space-between; align-items:center; gap:20px; color:var(--navy);
+    width:100%; background:none; border:0; text-align:left; padding:0;
+  }
+  .faq-q::after{content:'+'; font-family:var(--mono); color:var(--blue-deep); font-size:1.3rem; flex-shrink:0; transition:transform .25s ease;}
+  .faq-item.open .faq-q::after{transform:rotate(45deg);}
+  .faq-a{max-height:0; overflow:hidden; transition:max-height .35s ease;}
+  .faq-a p{padding-top:14px; font-size:0.95rem; color:var(--slate); max-width:62ch; line-height:1.6;}
+
+  /* ---------- final cta ---------- */
+  .final-cta{text-align:center; padding:124px 0 148px;}
+  .final-cta h2{max-width:24ch; margin:0 auto;}
+  .final-cta .section-lede{margin-left:auto; margin-right:auto;}
+  .final-cta .hero-actions{justify-content:center; margin-top:36px;}
+
+  footer{border-top:1px solid var(--line); padding:36px 0;}
+  .footer-inner{
+    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px;
+    font-family:var(--mono); font-size:0.74rem; color:var(--slate-soft);
+  }
+  .footer-inner a{text-decoration:none; border-bottom:1px solid var(--line-strong);}
+  .footer-inner a:hover{color:var(--navy);}
+
+  :focus-visible{outline:2px solid var(--blue-deep); outline-offset:3px;}
+
+  /* ---------- reveal ---------- */
+  .reveal{opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s ease;}
+  .reveal.in{opacity:1; transform:translateY(0);}
+
+  /* ---------- responsive ---------- */
+  @media (max-width: 860px){
+    .wrap{padding:0 20px;}
+    .nav-inner{padding:14px 20px;}
+    .positioning-grid{grid-template-columns:1fr;}
+    .pos-card{padding:28px 22px;}
+    .plan-card{padding:32px 24px;}
+    .plans-grid{grid-template-columns:1fr;}
+    .process-track{grid-template-columns:1fr; row-gap:32px;}
+    .process-track::before{display:none;}
+    .proof-panel{grid-template-columns:1fr; padding:32px 24px; gap:32px;}
+    .portfolio-grid{grid-template-columns:1fr;}
+    .portfolio-points{grid-template-columns:1fr 1fr;}
+    .proof-visual{aspect-ratio:auto; padding:28px; gap:28px;}
+    .hero{padding:132px 0 72px;}
+    .hero-meta{gap:28px;}
+    section{padding:84px 0;}
+    .nav-cta{padding:9px 14px; font-size:0.68rem;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    .reveal{opacity:1; transform:none; transition:none;}
+    .line-divider path{stroke-dashoffset:0; transition:none;}
+  }
+/* === TEMA BELEZA 05-10-2026 (claro, rosé, pra salões) === */
+:root{--navy:#3A2730;--navy-2:#4A3540;--ice:#FFF7F8;--paper:#FFFFFF;--slate:#7D6770;--slate-soft:#A8949C;--line:#F3DDE3;--line-strong:#EBC9D3;--blue:#D9567F;--blue-deep:#B83E67;--display:'Cormorant Garamond',Georgia,serif}
+body{background:var(--ice);color:var(--navy)}
+header.site{background:rgba(255,247,248,.86)!important;backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+h1,h2,.final-cta h2{font-family:var(--display);font-weight:600;letter-spacing:-.01em;line-height:1.02}
+h1{font-size:clamp(3rem,6.6vw,5.6rem)}
+h1 .accent{font-weight:600;font-style:italic}
+h2{font-size:clamp(2.2rem,4.8vw,3.5rem)}
+.accent,h2 em{font-style:italic;color:var(--blue);background:none!important;-webkit-text-fill-color:var(--blue)!important}
+.nav-cta,.btn-primary{background:linear-gradient(90deg,#F08BAA,#D9567F)!important;color:#fff!important;border-radius:999px;box-shadow:0 12px 30px rgba(217,86,127,.28)}
+.btn-ghost{color:var(--navy);border-color:var(--line-strong)}
+.founder .pill{background:var(--blue);color:#fff}
+.plans-grid{gap:18px;background:transparent;border:0}
+.plan-card{border:1px solid var(--line);border-radius:22px;background:var(--paper)}
+.plan-card.is-featured{background:linear-gradient(180deg,#FFE9F0,#FFFFFF 55%);border:2px solid #F49AB5;color:var(--navy)}
+.plan-card.is-featured *{color:inherit}
+.plan-card.is-featured .plan-num,.plan-card.is-featured .plan-list li::before{color:var(--blue)}
+.is-featured .plan-cta,.plan-cta:hover{background:linear-gradient(90deg,#F08BAA,#D9567F);color:#fff!important;border-color:transparent}
+.plan-cta{border-radius:999px}
+.proof-panel{background:var(--paper);border:1px solid var(--line);color:var(--navy)}
+.mdl{border-radius:24px}
+.mdl-grade .mdl{position:relative;isolation:isolate;transition:transform .3s,box-shadow .3s,border-color .3s}
+.mdl-grade .mdl::before{content:"";position:absolute;inset:0;border-radius:inherit;z-index:-1;opacity:0;transition:opacity .35s;background:radial-gradient(420px circle at var(--mx,50%) var(--my,30%),rgba(244,154,181,.30),transparent 60%)}
+.mdl-grade .mdl:hover{border-color:#F49AB5;box-shadow:0 0 0 1px rgba(244,154,181,.5),0 0 30px rgba(244,154,181,.45),0 24px 50px rgba(217,86,127,.15)}
+.mdl-grade .mdl:hover::before{opacity:1}
+.mdl-tela{border-color:#3A2730!important}
+.mdl-plano,.mdl-abrir{color:var(--blue)!important}
+/* colagem de fotos clarinha no fundo da abertura */
+.hero{overflow:hidden;min-height:92vh;display:flex;align-items:center}
+.hero::before{content:"";position:absolute;inset:0;background:url(colagem-beleza.webp) right center/cover no-repeat;opacity:.55}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--ice) 0%,rgba(255,247,248,.93) 40%,rgba(255,247,248,.35) 75%,rgba(255,247,248,.5) 100%),linear-gradient(180deg,rgba(255,247,248,.6) 0%,transparent 25%,transparent 70%,var(--ice) 100%)}
+.hero .wrap{position:relative;z-index:1;width:100%}
+.hero h1{max-width:12ch}
+.hero-sub{max-width:46ch}
+@media (max-width:860px){.hero::before{opacity:.3;background-position:30% center}.hero::after{background:linear-gradient(180deg,rgba(255,247,248,.8) 0%,rgba(255,247,248,.88) 50%,var(--ice) 100%)}.hero h1{max-width:none}}
+/* === FIM TEMA BELEZA === */
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="nav-inner">
+    <a class="brand" href="#">Ink<span>.</span>Sites</a>
+    <a class="nav-cta" href="https://ig.me/m/inksites.br" target="_blank" rel="noopener">Chamar no Instagram</a>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    
+    <div class="eyebrow">Sites para salões, sobrancelha e maquiagem</div>
+    <h1 class="reveal">O site que faz a cliente <span class="accent">escolher você</span> antes de te conhecer.</h1>
+    <p class="hero-sub reveal">Um site lindo e direto ao ponto pro seu salão, studio de sobrancelha, maquiagem ou unhas. Quem procura no Google encontra seus serviços, preços, fotos e o botão de agendar. E você vê o seu pronto <strong>antes de pagar qualquer coisa</strong>.</p>
+    <div class="hero-actions reveal">
+      <a class="btn-primary" href="https://ig.me/m/inksites.br" target="_blank" rel="noopener">Quero ver meu rascunho →</a>
+      <a class="btn-ghost" href="#projetos">Ver modelos</a>
+    </div>
+    <div class="hero-meta reveal">
+      <div><strong>Rascunho grátis</strong>você vê antes de fechar</div>
+      <div><strong>Tudo incluso</strong>domínio, hospedagem e manutenção</div>
+      <div><strong>Sem taxa de criação</strong>e sem multa pra cancelar</div>
+    </div>
+  </div>
+</section>
+
+<section id="projetos">
+  <div class="wrap">
+    <div class="section-tag">Modelos</div>
+    <h2 class="reveal">Veja como o seu site pode ficar.</h2>
+    <p class="section-lede reveal">Negócios fictícios, feitos pra você ver como fica. No seu entram o seu nome, as suas fotos, os seus serviços e as suas cores. Abra no celular.</p>
+    <div class="mdl-grade">
+      <a class="mdl" href="https://inksites.github.io/studio-lirio/" target="_blank" rel="noopener">
+        <span class="mdl-tela"><img src="../modelos/studio-lirio.webp" alt="Studio Lírio: cena de maquiagem do site" loading="lazy" width="480" height="560"></span>
+        <span class="mdl-plano">Sobrancelha e maquiagem</span>
+        <strong>Studio Lírio</strong>
+        <span class="mdl-txt">Rosé e delicado. Abre como um filme: o atendimento vai aparecendo conforme você rola.</span>
+        <span class="mdl-abrir">Abrir o modelo →</span>
+      </a>
+      <a class="mdl" href="https://inksites.github.io/studio-onix/" target="_blank" rel="noopener">
+        <span class="mdl-tela"><img src="../modelos/studio-onix.webp" alt="Studio Ônix: topo do site em preto e branco" loading="lazy" width="480" height="560"></span>
+        <span class="mdl-plano">Sobrancelha e maquiagem</span>
+        <strong>Studio Ônix</strong>
+        <span class="mdl-txt">Preto e branco com detalhes em dourado. Visual de salão de luxo.</span>
+        <span class="mdl-abrir">Abrir o modelo →</span>
+      </a>
+      <a class="mdl" href="https://inksites.github.io/salao-modelo-fino/" target="_blank" rel="noopener">
+        <span class="mdl-tela"><img src="maison-iris.webp" alt="Maison Íris: topo do site de salão de cabelo" loading="lazy" width="480" height="560"></span>
+        <span class="mdl-plano">Cabelo e coloração</span>
+        <strong>Maison Íris</strong>
+        <span class="mdl-txt">Claro e elegante, com letras finas. Serviços, preços e agendamento pelo WhatsApp.</span>
+        <span class="mdl-abrir">Abrir o modelo →</span>
+      </a>
+    </div>
+  </div>
+</section>
+<style>
+.mdl-grade{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px;margin-top:34px}
+.mdl{display:flex;flex-direction:column;gap:8px;text-decoration:none;color:var(--navy);background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:18px 18px 22px;transition:transform .25s,box-shadow .25s}
+.mdl:hover{transform:translateY(-4px);box-shadow:0 22px 46px rgba(22,24,29,.14)}
+.mdl-tela{display:block;aspect-ratio:480/560;border-radius:22px;overflow:hidden;background:#111;border:7px solid #16181D;box-shadow:0 10px 24px rgba(22,24,29,.18);margin-bottom:8px}
+.mdl-tela img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s}
+.mdl:hover .mdl-tela img{transform:scale(1.03)}
+.mdl-plano{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blue-deep);margin-top:4px}
+.mdl strong{font-size:22px;letter-spacing:-.01em}
+.mdl-txt{font-size:15px;color:var(--slate);flex:1}
+.mdl-abrir{font-weight:700;color:var(--blue-deep);margin-top:6px}
+@media (max-width:900px){.mdl-grade{grid-template-columns:1fr;max-width:420px}}
+</style>
+
+<div class="line-divider" id="div1"><svg viewBox="0 0 1120 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0,30 L1120,30"/></svg></div>
+
+<section id="por-que">
+  <div class="wrap">
+    <div class="section-tag">Por que confiar nisso</div>
+    <h2 class="reveal">A gente não vende só um site. Vende o primeiro degrau da confiança do seu cliente.</h2>
+    <p class="section-lede reveal">Antes de chamar no WhatsApp, o cliente pesquisa. Se ele não acha preço, foto e endereço em poucos segundos, vai pro concorrente. O site da InkSites existe pra resolver exatamente isso.</p>
+
+    <div class="positioning-grid">
+      <div class="pos-card reveal">
+        <div class="num">01</div>
+        <h3>Feito pra fazer o cliente chamar</h3>
+        <p>Preço na tela, fotos, mapa e botão de WhatsApp em 1 toque. Cada clique no WhatsApp é medido, e você recebe o número todo mês.</p>
+      </div>
+      <div class="pos-card reveal">
+        <div class="num">02</div>
+        <h3>Entendo o que faz um cliente decidir</h3>
+        <p>Um site bonito é diferente de um site que faz o telefone tocar. O foco nunca é prêmio de design — é agenda cheia.</p>
+      </div>
+      <div class="pos-card reveal">
+        <div class="num">03</div>
+        <h3>Você vê pronto antes de decidir</h3>
+        <p>Nada de proposta cheia de promessa. A gente monta um rascunho com as fotos e os serviços do seu negócio, você abre no celular e decide se quer deixar no ar.</p>
+      </div>
+      <div class="pos-card reveal">
+        <div class="num">04</div>
+        <h3>Manutenção inclusa, sem dor de cabeça</h3>
+        <p>Mudou o preço, o horário ou quer trocar fotos? É só mandar mensagem. As alterações do mês já estão na mensalidade.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="line-divider" id="div2"><svg viewBox="0 0 1120 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0,30 L1120,30"/></svg></div>
+
+<section id="planos">
+  <div class="wrap">
+    <div class="section-tag">Planos</div>
+    <h2 class="reveal">Dois planos, tudo incluso, sem surpresa.</h2>
+    <p class="section-lede reveal">Sem taxa de criação. Você vê o site pronto antes de pagar, e a mensalidade cobre o endereço próprio, a hospedagem, a segurança e as atualizações do mês.</p>
+
+    <div class="founder reveal">
+      <span class="pill">Sem multa</span>
+      <span><strong>Os 3 primeiros meses são pagos juntos quando o site vai pro ar.</strong> Depois, é mês a mês, e você cancela quando quiser: o site sai do ar e você não paga mais nada.</span>
+    </div>
+
+    <div class="plans-grid">
+
+      <div class="plan-card reveal">
+        <div class="plan-num">01</div>
+        <h3>Essencial</h3>
+        <div class="plan-tag">Presença profissional, direto ao ponto</div>
+        <div class="plan-price">
+          <span class="monthly">R$ 89<small>/mês</small></span>
+          <span class="setup">Pra entrar: 3 meses juntos, R$ 267</span>
+        </div>
+        <ul class="plan-list">
+          <li>Site de página única: serviços, preços, fotos, mapa e horário</li>
+          <li>Botão de WhatsApp direto, sem formulário</li>
+          <li>Feito pra abrir rápido no celular</li>
+          <li>Endereço próprio (.com.br) no seu nome, hospedagem e segurança inclusos</li>
+          <li>2 atualizações por mês</li>
+        </ul>
+        <a class="plan-cta" href="https://ig.me/m/inksites.br" target="_blank" rel="noopener">Quero o Essencial</a>
+      </div>
+
+      <div class="plan-card is-featured reveal">
+        <div class="plan-num">02</div>
+        <h3>Profissional</h3>
+        <div class="plan-tag">Pra aparecer no Google e se manter atualizado</div>
+        <div class="plan-price">
+          <span class="monthly">R$ 129<small>/mês</small></span>
+          <span class="setup">Pra entrar: 3 meses juntos, R$ 387</span>
+        </div>
+        <ul class="plan-list">
+          <li>Tudo do plano Essencial</li>
+          <li>Criação ou ajuste do seu perfil no Google Maps</li>
+          <li>Capa em vídeo animado, que abre o site com o seu negócio em movimento</li>
+          <li>4 atualizações por mês</li>
+        </ul>
+        <a class="plan-cta" href="https://ig.me/m/inksites.br" target="_blank" rel="noopener">Quero o Profissional</a>
+      </div>
+
+    </div>
+    <div class="plans-note">Atualização = uma lista de mudanças mandada de uma vez (preços, horários, textos ou fotos), pronta em até 2 dias úteis · atualização a mais: R$ 30<br>Não incluso: posts e artes pro Instagram, logo, anúncios, loja virtual e fotos</div>
+  </div>
+</section>
+
+<div class="line-divider" id="div3"><svg viewBox="0 0 1120 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0,30 L1120,30"/></svg></div>
+
+<section id="processo">
+  <div class="wrap">
+    <div class="section-tag">Como funciona</div>
+    <h2 class="reveal">Do primeiro contato ao site no ar, sem enrolação.</h2>
+
+    <div class="process-track">
+      <div class="process-step reveal">
+        <div class="process-dot">01</div>
+        <h3>Rascunho grátis</h3>
+        <p>Manda o @ do seu Instagram. A gente monta uma prévia do site com as suas fotos e serviços e te envia o link.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="process-dot">02</div>
+        <h3>Ajustes</h3>
+        <p>Você abre no celular, pede o que quer mudar e a gente acerta os detalhes — textos, preços, fotos, cores.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="process-dot">03</div>
+        <h3>No ar</h3>
+        <p>O domínio é registrado no seu nome, o site é publicado e o botão de WhatsApp, testado. Em até 7 dias depois da aprovação.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="process-dot">04</div>
+        <h3>Acompanhamento</h3>
+        <p>Todo mês você recebe quantas pessoas clicaram pra falar com você, e a gente cuida das alterações.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section id="faq">
+  <div class="wrap">
+    <div class="section-tag">Perguntas antes de fechar</div>
+    <h2 class="reveal">O que costuma perguntar antes de chamar no WhatsApp</h2>
+
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false">O rascunho é grátis mesmo?</button>
+        <div class="faq-a"><p>É. A gente monta a prévia com as fotos e os serviços que você já mostra no Instagram e te mando o link. Se não gostar, não paga nada e o rascunho é apagado.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false">Por que não faço meu site sozinho?</button>
+        <div class="faq-a"><p>Dá pra fazer, mas leva dias pra aprender e o resultado costuma sair amador. Por trás de um site que traz cliente tem domínio e segurança configurados, texto e dados que o Google lê, fotos otimizadas pra abrir rápido no celular, botão de WhatsApp no lugar certo e alguém mantendo tudo atualizado. As plataformas de montar site também cobram por mês, e esse trabalho todo fica com você. Aqui você recebe pronto e continua cuidando do seu negócio.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false">Preciso já ter domínio e hospedagem?</button>
+        <div class="faq-a"><p>Não. O domínio (.com.br) e a hospedagem estão inclusos na mensalidade. O domínio é registrado no seu nome — ele é seu — e a gente cuida de deixar tudo publicado. Se você já tiver um, a gente aproveita.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false">Quanto tempo leva até o site no ar?</button>
+        <div class="faq-a"><p>O rascunho fica pronto em poucos dias. Depois que você aprova e manda o que faltar (textos, fotos, preços), o site vai ao ar em até 7 dias.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false">Depois de pronto, como faço pra mudar alguma coisa?</button>
+        <div class="faq-a"><p>Manda por mensagem a lista do que quer mudar. As atualizações do mês já estão na mensalidade: 2 no Essencial e 4 no Profissional. Uma seção ou página nova é orçada antes.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false">E se eu quiser cancelar?</button>
+        <div class="faq-a"><p>Pode cancelar quando quiser, sem multa: o site sai do ar e você não paga mais nada. Os meses já pagos não são devolvidos. O endereço do site é registrado no seu nome e continua seu.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false">Atende fora de Recife?</button>
+        <div class="faq-a"><p>Sim, a InkSites atende negócios de todo o Brasil. Tudo acontece online: a gente conversa pelo direct, você recebe o rascunho por link, aprova pelo celular e a gente cuida do domínio e da publicação. Você não precisa sair do seu negócio.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false">Funciona pra qualquer tipo de negócio?</button>
+        <div class="faq-a"><p>O foco é negócio que atende presencial e fecha pelo WhatsApp: salão, clínica, estética, estúdio, barbearia, personal, loja. Se o seu caso for diferente, chama no direct e a gente vê se encaixa.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="wrap">
+    <div class="section-tag" style="justify-content:center; display:flex;">Bora começar</div>
+    <h2 class="reveal">Manda o @ do seu negócio e a gente te mostra como o seu site ficaria.</h2>
+    <p class="section-lede reveal">Sem compromisso. Se não gostar do rascunho, fica por isso mesmo.</p>
+    <div class="hero-actions reveal">
+      <a class="btn-primary" href="https://ig.me/m/inksites.br" target="_blank" rel="noopener">Quero ver meu rascunho →</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <span>InkSites · atendimento online em todo o Brasil</span>
+    <span><a href="https://www.instagram.com/inksites.br/" target="_blank" rel="noopener">@inksites.br</a> · <a href="https://ig.me/m/inksites.br" target="_blank" rel="noopener">Direct</a></span>
+  </div>
+</footer>
+
+<script>
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, {threshold:0.15});
+  revealEls.forEach(el=>io.observe(el));
+
+  const lineEls = document.querySelectorAll('.line-divider');
+  const lineIo = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ e.target.classList.add('in'); lineIo.unobserve(e.target); }
+    });
+  }, {threshold:0.4});
+  lineEls.forEach(el=>lineIo.observe(el));
+
+  document.querySelectorAll('.faq-item').forEach(item=>{
+    const q = item.querySelector('.faq-q');
+    const a = item.querySelector('.faq-a');
+    q.addEventListener('click', ()=>{
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(o=>{
+        o.classList.remove('open');
+        o.querySelector('.faq-q').setAttribute('aria-expanded','false');
+        o.querySelector('.faq-a').style.maxHeight = null;
+      });
+      if(!isOpen){
+        item.classList.add('open');
+        q.setAttribute('aria-expanded','true');
+        a.style.maxHeight = a.scrollHeight + 'px';
+      }
+    });
+  });
+</script>
+
+<script>/* luz do cartao segue o mouse */document.querySelectorAll(".mdl").forEach(function(c){c.addEventListener("mousemove",function(e){var r=c.getBoundingClientRect();c.style.setProperty("--mx",(e.clientX-r.left)+"px");c.style.setProperty("--my",(e.clientY-r.top)+"px")})});</script>
+</body>
+</html>
