@@ -398,18 +398,14 @@ h2{font-size:clamp(2rem,4.6vw,3.3rem)}
 .mdl-abas button[aria-selected="true"]{background:linear-gradient(90deg,#6FA8FF,#3B6FE0)!important;color:#111!important;border-color:transparent!important}
 .mdl-tela{border-color:#000!important}
 .mdl-plano,.mdl-abrir{color:#6FA8FF!important}
-/* celulares na abertura */
-.hero .wrap{position:relative}
-.hero h1,.hero-sub{max-width:13ch}
-.hero-sub{max-width:44ch}
-.hero-telas{position:absolute;right:-70px;top:40px;width:560px;height:560px;pointer-events:none}
-@media (max-width:1320px) and (min-width:1101px){.hero-telas{right:0;transform:scale(.8);transform-origin:right top}}
-.hero-telas img{position:absolute;bottom:0;aspect-ratio:480/854;object-fit:cover;border-radius:32px;border:7px solid #05070B;box-shadow:0 30px 60px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.07)}
-.hero-telas .t2{left:50%;transform:translateX(-50%);width:244px;z-index:2}
-.hero-telas .t1,.hero-telas .t3{width:196px;bottom:30px;filter:brightness(.8)}
-.hero-telas .t1{left:0}.hero-telas .t3{right:0}
-@media (max-width:1100px){.hero-telas{position:relative;right:auto;top:auto;width:100%;max-width:560px;height:540px;margin:40px auto 0}.hero h1{max-width:none}}
-@media (max-width:480px){.hero-telas{height:400px;margin-top:28px}.hero-telas .t2{width:186px}.hero-telas .t1,.hero-telas .t3{width:146px;bottom:20px}}
+/* colagem translucida de fundo na abertura */
+.hero{overflow:hidden;min-height:92vh;display:flex;align-items:center}
+.hero::before{content:"";position:absolute;inset:0;background:url(modelos/colagem-topo.webp) right center/cover no-repeat;opacity:.5;filter:saturate(.85)}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--ice) 0%,rgba(11,12,14,.88) 38%,rgba(11,12,14,.35) 75%,rgba(11,12,14,.55) 100%),linear-gradient(180deg,rgba(11,12,14,.6) 0%,transparent 25%,transparent 70%,var(--ice) 100%)}
+.hero .wrap{position:relative;z-index:1;width:100%}
+.hero h1{max-width:13ch}
+.hero-sub{max-width:46ch}
+@media (max-width:860px){.hero::before{opacity:.32;background-position:30% center}.hero::after{background:linear-gradient(180deg,rgba(11,12,14,.75) 0%,rgba(11,12,14,.82) 50%,var(--ice) 100%)}.hero h1{max-width:none}}
 /* === FIM TEMA VITRINE === */
 </style>
 </head>
@@ -433,8 +429,6 @@ h2{font-size:clamp(2rem,4.6vw,3.3rem)}
       <a class="btn-primary" href="https://ig.me/m/inksites.br" target="_blank" rel="noopener">Quero ver meu rascunho →</a>
       <a class="btn-ghost" href="#projetos">Ver modelos</a>
     </div>
-    
-    <div class="hero-telas" aria-hidden="true"><img class="t1" src="modelos/tela-lirio.webp" alt=""><img class="t2" src="modelos/tela-vertice.webp" alt=""><img class="t3" src="modelos/tela-onix.webp" alt=""></div><!--telas-->
     <div class="hero-meta reveal">
       <div><strong>Rascunho grátis</strong>você vê antes de fechar</div>
       <div><strong>Tudo incluso</strong>domínio, hospedagem e manutenção</div>
