@@ -1,0 +1,1199 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Site Essencial por R$297 | Ateliê de Sites</title>
+  <meta name="description" content="Site de uma página para negócios locais por R$297, pagamento único. Domínio e primeiro ano no ar inclusos; depois, R$99 por ano.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://inksites.github.io/essencial/">
+  <meta name="theme-color" content="#1C1519">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Ateliê de Sites">
+  <meta property="og:title" content="Site Essencial por R$297 | Ateliê de Sites">
+  <meta property="og:description" content="Site de uma página por R$297, pagamento único. Domínio e primeiro ano no ar inclusos; depois, R$99 por ano.">
+  <meta property="og:url" content="https://inksites.github.io/essencial/">
+  <meta property="og:image" content="https://inksites.github.io/essencial/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Site Essencial do Ateliê de Sites">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Site Essencial por R$297 | Ateliê de Sites">
+  <meta name="twitter:description" content="Site de uma página por R$297, pagamento único. Domínio e primeiro ano no ar inclusos; depois, R$99 por ano.">
+  <meta name="twitter:image" content="https://inksites.github.io/essencial/og.png">
+
+  <link rel="icon" type="image/svg+xml" href="./simbolo-atelie-sites.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,600;6..96,700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --ink: #1C1519;
+      --wine: #633243;
+      --rose: #D47487;
+      --blush: #F2DDE1;
+      --cream: #F7EFE8;
+      --paper: #FFFDFC;
+      --muted: #6F6167;
+      --line: rgba(99, 50, 67, .18);
+      --shadow: 0 24px 70px rgba(28, 21, 25, .12);
+      --display: "Bodoni Moda", Georgia, serif;
+      --body: "Manrope", Arial, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--ink);
+      font-family: var(--body);
+      font-size: 16px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; }
+
+    a:focus-visible,
+    summary:focus-visible {
+      outline: 3px solid var(--rose);
+      outline-offset: 4px;
+    }
+
+    .skip-link {
+      position: fixed;
+      top: 12px;
+      left: 12px;
+      z-index: 100;
+      padding: 10px 16px;
+      background: var(--ink);
+      color: var(--cream);
+      border-radius: 999px;
+      transform: translateY(-160%);
+    }
+
+    .skip-link:focus { transform: translateY(0); }
+
+    .wrap {
+      width: min(1120px, calc(100% - 48px));
+      margin-inline: auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(247, 239, 232, .92);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(14px);
+    }
+
+    .nav {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      width: 38px;
+      height: 38px;
+      display: block;
+      object-fit: contain;
+    }
+
+    .brand-name {
+      font-family: var(--body);
+      font-size: 1.08rem;
+      font-weight: 700;
+      letter-spacing: -.03em;
+    }
+
+    .brand-dot { color: var(--rose); }
+
+    .nav-link {
+      color: var(--wine);
+      font-size: .84rem;
+      font-weight: 800;
+      letter-spacing: .04em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .nav-link:hover { color: var(--ink); }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(72px, 10vw, 132px) 0 clamp(80px, 11vw, 140px);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 6%;
+      right: -12%;
+      width: min(48vw, 650px);
+      aspect-ratio: 1;
+      border: 1px solid rgba(212, 116, 135, .28);
+      border-radius: 50%;
+      box-shadow: inset 0 0 0 70px rgba(242, 221, 225, .28), inset 0 0 0 140px rgba(212, 116, 135, .05);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 1.12fr) minmax(320px, .88fr);
+      gap: clamp(44px, 7vw, 90px);
+      align-items: center;
+    }
+
+    .kicker,
+    .section-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 20px;
+      color: var(--wine);
+      font-size: .76rem;
+      font-weight: 800;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+    }
+
+    .kicker::before,
+    .section-kicker::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: var(--rose);
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+
+    h1, h2, h3 {
+      font-family: var(--display);
+      line-height: 1.08;
+      letter-spacing: -.035em;
+    }
+
+    h1 {
+      max-width: 10ch;
+      margin-bottom: 24px;
+      font-size: clamp(3.25rem, 8vw, 6.55rem);
+      font-weight: 600;
+    }
+
+    h1 em {
+      color: var(--wine);
+      font-weight: 500;
+    }
+
+    .hero-lede {
+      max-width: 58ch;
+      margin-bottom: 32px;
+      color: var(--muted);
+      font-size: clamp(1rem, 1.7vw, 1.14rem);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 18px 22px;
+    }
+
+    .button {
+      min-height: 54px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 24px;
+      border: 2px solid var(--ink);
+      border-radius: 999px;
+      background: var(--ink);
+      color: var(--cream);
+      font-size: .92rem;
+      font-weight: 800;
+      letter-spacing: .02em;
+      text-decoration: none;
+      transition: transform .2s ease, background .2s ease, color .2s ease;
+    }
+
+    .button:hover {
+      background: var(--wine);
+      border-color: var(--wine);
+      transform: translateY(-2px);
+    }
+
+    .renewal-inline {
+      max-width: 25ch;
+      margin: 0;
+      color: var(--wine);
+      font-size: .82rem;
+      font-weight: 700;
+      line-height: 1.45;
+    }
+
+    .price-card {
+      position: relative;
+      padding: clamp(34px, 5vw, 52px);
+      background: var(--ink);
+      color: var(--cream);
+      border-radius: 28px 4px 28px 4px;
+      box-shadow: var(--shadow);
+    }
+
+    .price-card::after {
+      content: "";
+      position: absolute;
+      right: -20px;
+      bottom: -22px;
+      width: 92px;
+      height: 92px;
+      border-right: 2px solid var(--rose);
+      border-bottom: 2px solid var(--rose);
+      border-radius: 0 0 26px;
+      pointer-events: none;
+    }
+
+    .price-label {
+      display: inline-block;
+      margin-bottom: 24px;
+      padding: 8px 13px;
+      background: var(--blush);
+      color: var(--wine);
+      border-radius: 999px;
+      font-size: .7rem;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .price {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 13px;
+      font-family: var(--display);
+      font-size: clamp(4.1rem, 8vw, 6.25rem);
+      font-weight: 600;
+      letter-spacing: -.07em;
+      line-height: .82;
+      white-space: nowrap;
+    }
+
+    .price small {
+      margin: 6px 6px 0 0;
+      color: var(--rose);
+      font-family: var(--body);
+      font-size: .9rem;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .price-copy {
+      margin-bottom: 24px;
+      color: var(--blush);
+      font-size: .94rem;
+    }
+
+    .renewal-box {
+      margin: 0;
+      padding-top: 22px;
+      border-top: 1px solid rgba(242, 221, 225, .2);
+      font-size: .9rem;
+      line-height: 1.55;
+    }
+
+    .renewal-box strong { color: var(--rose); }
+
+    section { padding: clamp(78px, 10vw, 122px) 0; }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: .78fr 1.22fr;
+      gap: 44px;
+      align-items: end;
+      margin-bottom: 48px;
+    }
+
+    .section-head h2 {
+      max-width: 13ch;
+      margin-bottom: 0;
+      font-size: clamp(2.4rem, 5vw, 4.25rem);
+      font-weight: 600;
+    }
+
+    .section-intro {
+      max-width: 55ch;
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.04rem;
+    }
+
+    .what {
+      background: var(--paper);
+      border-block: 1px solid var(--line);
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border: 1px solid var(--line);
+      border-radius: 22px 3px 22px 3px;
+      overflow: hidden;
+    }
+
+    .feature {
+      min-height: 215px;
+      padding: 30px;
+      background: var(--cream);
+    }
+
+    .feature + .feature { border-left: 1px solid var(--line); }
+
+    .feature-num {
+      display: block;
+      margin-bottom: 42px;
+      color: var(--rose);
+      font-size: .72rem;
+      font-weight: 800;
+      letter-spacing: .12em;
+    }
+
+    .feature h3 {
+      margin-bottom: 10px;
+      color: var(--wine);
+      font-size: 1.45rem;
+      font-weight: 600;
+    }
+
+    .feature p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: .92rem;
+    }
+
+    .lists-grid {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 24px;
+    }
+
+    .list-card {
+      padding: clamp(28px, 4vw, 42px);
+      border: 1px solid var(--line);
+      border-radius: 4px 24px 4px 24px;
+      background: var(--paper);
+    }
+
+    .list-card.alt {
+      background: var(--blush);
+      border-color: transparent;
+    }
+
+    .list-card h3 {
+      margin-bottom: 26px;
+      font-size: clamp(1.75rem, 3vw, 2.35rem);
+      font-weight: 600;
+    }
+
+    .check-list {
+      display: grid;
+      gap: 14px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .check-list li {
+      position: relative;
+      padding-left: 26px;
+      color: var(--muted);
+      font-size: .94rem;
+    }
+
+    .check-list li::before {
+      content: "";
+      position: absolute;
+      top: .67em;
+      left: 0;
+      width: 10px;
+      height: 10px;
+      border: 2px solid var(--rose);
+      border-radius: 50%;
+    }
+
+    .alt .check-list li { color: var(--ink); }
+
+    .alt .check-list li::before {
+      border-color: var(--wine);
+      border-radius: 2px;
+      transform: rotate(45deg);
+    }
+
+    .process {
+      background: var(--ink);
+      color: var(--cream);
+    }
+
+    .process .section-kicker { color: var(--blush); }
+    .process .section-intro { color: rgba(247, 239, 232, .74); }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      counter-reset: step;
+    }
+
+    .step {
+      position: relative;
+      padding: 28px 24px 30px;
+      border: 1px solid rgba(242, 221, 225, .18);
+      border-radius: 3px 18px 3px 18px;
+      counter-increment: step;
+    }
+
+    .step::before {
+      content: "0" counter(step);
+      display: block;
+      margin-bottom: 48px;
+      color: var(--rose);
+      font-size: .75rem;
+      font-weight: 800;
+      letter-spacing: .12em;
+    }
+
+    .step h3 {
+      margin-bottom: 12px;
+      color: var(--blush);
+      font-family: var(--body);
+      font-size: 1rem;
+      font-weight: 800;
+      letter-spacing: 0;
+      line-height: 1.35;
+    }
+
+    .step p {
+      margin-bottom: 0;
+      color: rgba(247, 239, 232, .68);
+      font-size: .84rem;
+    }
+
+    .preview-note {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 16px;
+      align-items: start;
+      margin-top: 28px;
+      padding: 20px 22px;
+      background: rgba(242, 221, 225, .08);
+      border-left: 3px solid var(--rose);
+      border-radius: 0 10px 10px 0;
+    }
+
+    .preview-note strong {
+      color: var(--rose);
+      font-size: .78rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .preview-note p {
+      margin: 0;
+      color: rgba(247, 239, 232, .76);
+      font-size: .86rem;
+    }
+
+    .examples { overflow: hidden; }
+
+    .examples-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 30px;
+    }
+
+    .example {
+      padding: 16px;
+      border: 1px solid var(--line);
+      background: var(--paper);
+      border-radius: 22px 4px 22px 4px;
+      box-shadow: 0 20px 55px rgba(99, 50, 67, .08);
+    }
+
+    .example-label {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      margin: 5px 5px 15px;
+      color: var(--wine);
+      font-size: .7rem;
+      font-weight: 800;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .example-label::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      background: var(--rose);
+      border-radius: 50%;
+    }
+
+    .mockup {
+      overflow: hidden;
+      min-height: 360px;
+      padding: 28px;
+      border-radius: 14px 2px 14px 2px;
+      background: var(--blush);
+    }
+
+    .mockup.dark { background: var(--wine); color: var(--cream); }
+
+    .mock-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 46px;
+    }
+
+    .mock-logo {
+      width: 76px;
+      height: 8px;
+      background: currentColor;
+      border-radius: 999px;
+      opacity: .72;
+    }
+
+    .mock-menu {
+      display: flex;
+      gap: 5px;
+    }
+
+    .mock-menu i {
+      width: 4px;
+      height: 4px;
+      display: block;
+      background: currentColor;
+      border-radius: 50%;
+      opacity: .55;
+    }
+
+    .mock-title {
+      max-width: 7ch;
+      margin-bottom: 18px;
+      font-family: var(--display);
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1;
+    }
+
+    .mock-line {
+      width: 72%;
+      height: 7px;
+      margin-bottom: 8px;
+      background: currentColor;
+      border-radius: 999px;
+      opacity: .28;
+    }
+
+    .mock-line.short { width: 48%; }
+
+    .mock-button {
+      width: 112px;
+      height: 34px;
+      margin-top: 24px;
+      border: 2px solid currentColor;
+      border-radius: 999px;
+      opacity: .72;
+    }
+
+    .mock-tiles {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 9px;
+      margin-top: 40px;
+    }
+
+    .mock-tile {
+      aspect-ratio: 1;
+      border-radius: 10px 2px 10px 2px;
+      background: rgba(255, 253, 252, .55);
+    }
+
+    .mockup.dark .mock-tile { background: rgba(242, 221, 225, .14); }
+
+    .price-section {
+      background: var(--blush);
+      border-block: 1px solid rgba(99, 50, 67, .12);
+    }
+
+    .offer {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      overflow: hidden;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 28px 4px 28px 4px;
+      box-shadow: var(--shadow);
+    }
+
+    .offer-main,
+    .offer-options { padding: clamp(34px, 6vw, 64px); }
+
+    .offer-main {
+      background: var(--wine);
+      color: var(--cream);
+    }
+
+    .offer-main .price-label { margin-bottom: 32px; }
+
+    .offer-main .price {
+      margin-bottom: 22px;
+      font-size: clamp(4.5rem, 9vw, 7rem);
+    }
+
+    .offer-main > p {
+      max-width: 38ch;
+      color: var(--blush);
+    }
+
+    .offer-renewal {
+      margin: 30px 0;
+      padding: 18px 0;
+      border-block: 1px solid rgba(247, 239, 232, .18);
+      font-weight: 700;
+    }
+
+    .offer-renewal strong { color: var(--rose); }
+
+    .offer-main .button {
+      background: var(--cream);
+      border-color: var(--cream);
+      color: var(--ink);
+    }
+
+    .offer-main .button:hover {
+      background: var(--blush);
+      border-color: var(--blush);
+    }
+
+    .offer-options h3 {
+      margin-bottom: 12px;
+      color: var(--wine);
+      font-size: 2rem;
+      font-weight: 600;
+    }
+
+    .offer-options > p { color: var(--muted); }
+
+    .option-list {
+      display: grid;
+      gap: 13px;
+      margin-top: 26px;
+    }
+
+    .option {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 22px;
+      padding: 17px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .option span { color: var(--muted); font-size: .88rem; }
+    .option strong { color: var(--wine); white-space: nowrap; }
+
+    .option-note {
+      margin: 18px 0 0;
+      font-size: .78rem;
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: .7fr 1.3fr;
+      gap: clamp(40px, 7vw, 90px);
+      align-items: start;
+    }
+
+    .faq-title {
+      position: sticky;
+      top: 120px;
+    }
+
+    .faq-title h2 {
+      margin-bottom: 18px;
+      font-size: clamp(2.65rem, 5vw, 4.5rem);
+      font-weight: 600;
+    }
+
+    .faq-title p { color: var(--muted); }
+
+    details {
+      border-top: 1px solid var(--line);
+    }
+
+    details:last-child { border-bottom: 1px solid var(--line); }
+
+    summary {
+      position: relative;
+      padding: 24px 46px 24px 0;
+      cursor: pointer;
+      font-weight: 800;
+      list-style: none;
+    }
+
+    summary::-webkit-details-marker { display: none; }
+
+    summary::after {
+      content: "+";
+      position: absolute;
+      top: 18px;
+      right: 4px;
+      color: var(--rose);
+      font-family: var(--display);
+      font-size: 1.8rem;
+      font-weight: 500;
+    }
+
+    details[open] summary::after { content: "−"; }
+
+    details p {
+      max-width: 62ch;
+      margin-bottom: 26px;
+      padding-right: 44px;
+      color: var(--muted);
+      font-size: .92rem;
+    }
+
+    .final-cta {
+      padding-top: 40px;
+      background: var(--ink);
+      color: var(--cream);
+      text-align: center;
+    }
+
+    .final-card {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(58px, 9vw, 102px) 24px;
+      border: 1px solid rgba(242, 221, 225, .18);
+      border-radius: 32px 4px 32px 4px;
+    }
+
+    .final-card::before,
+    .final-card::after {
+      content: "";
+      position: absolute;
+      width: 210px;
+      height: 210px;
+      border: 1px solid var(--rose);
+      border-radius: 50%;
+      opacity: .28;
+    }
+
+    .final-card::before { top: -135px; left: -70px; }
+    .final-card::after { right: -80px; bottom: -145px; }
+
+    .final-card h2 {
+      max-width: 12ch;
+      margin: 0 auto 22px;
+      color: var(--blush);
+      font-size: clamp(2.8rem, 6vw, 5.2rem);
+      font-weight: 600;
+    }
+
+    .final-card p {
+      max-width: 46ch;
+      margin: 0 auto 30px;
+      color: rgba(247, 239, 232, .72);
+    }
+
+    .final-card .button {
+      background: var(--rose);
+      border-color: var(--rose);
+      color: var(--ink);
+    }
+
+    .final-card .button:hover {
+      background: var(--blush);
+      border-color: var(--blush);
+    }
+
+    .final-renewal {
+      margin-top: 18px !important;
+      color: var(--blush) !important;
+      font-size: .8rem;
+      font-weight: 700;
+    }
+
+    footer {
+      padding: 34px 0;
+      background: var(--ink);
+      color: rgba(247, 239, 232, .62);
+      font-size: .78rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .footer-inner a {
+      color: var(--blush);
+      text-decoration-color: var(--rose);
+      text-underline-offset: 4px;
+    }
+
+    @media (max-width: 880px) {
+      .hero-grid,
+      .section-head,
+      .faq-grid { grid-template-columns: 1fr; }
+
+      .hero-grid { gap: 56px; }
+      .hero::before { top: 38%; width: 72vw; }
+      .section-head { gap: 18px; }
+      .feature-grid { grid-template-columns: 1fr; }
+      .feature { min-height: 0; }
+      .feature + .feature { border-left: 0; border-top: 1px solid var(--line); }
+      .feature-num { margin-bottom: 24px; }
+      .steps { grid-template-columns: repeat(2, 1fr); }
+      .faq-title { position: static; }
+    }
+
+    @media (max-width: 700px) {
+      .wrap { width: min(100% - 32px, 1120px); }
+      .nav { min-height: 66px; }
+      .brand-name { font-size: 1.04rem; }
+      .nav-link { font-size: .72rem; }
+      .hero { padding-top: 62px; }
+      .hero-actions { align-items: flex-start; flex-direction: column; }
+      .price-card::after { right: -7px; }
+      .lists-grid,
+      .examples-grid,
+      .offer { grid-template-columns: 1fr; }
+      .steps { grid-template-columns: 1fr; }
+      .step::before { margin-bottom: 28px; }
+      .preview-note { grid-template-columns: 1fr; }
+      .offer-options { border-top: 1px solid var(--line); }
+      .footer-inner { align-items: flex-start; flex-direction: column; }
+    }
+
+    @media (max-width: 400px) {
+      h1 { font-size: 3rem; }
+      .nav-link { display: none; }
+      .price { font-size: 3.8rem; }
+      .mockup { min-height: 330px; padding: 22px; }
+      .option { align-items: flex-start; flex-direction: column; gap: 3px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="#inicio" aria-label="Ateliê de Sites — início">
+        <img class="brand-mark" src="./simbolo-atelie-sites.svg" alt="">
+        <span class="brand-name">atelie<span class="brand-dot">.</span>sites</span>
+      </a>
+      <a class="nav-link" href="https://ig.me/m/atelie.sites" rel="noopener noreferrer">Chame no direct</a>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="kicker">Site Essencial</p>
+          <h1 id="hero-title">Seu negócio merece um <em>endereço próprio.</em></h1>
+          <p class="hero-lede">Uma página profissional com serviços, fotos, localização e WhatsApp — tudo organizado para quem quer conhecer e chamar seu negócio.</p>
+          <div class="hero-actions">
+            <a class="button" href="https://ig.me/m/atelie.sites" rel="noopener noreferrer">Chame no direct</a>
+            <p class="renewal-inline">R$297, pagamento único. Depois do 1º ano, R$99/ano para manter domínio e site no ar.</p>
+          </div>
+        </div>
+
+        <aside class="price-card" aria-label="Preço do Site Essencial">
+          <span class="price-label">Pagamento único</span>
+          <div class="price"><small>R$</small>297</div>
+          <p class="price-copy">Domínio .com.br e primeiro ano no ar inclusos.</p>
+          <p class="renewal-box"><strong>Depois do 1º ano:</strong> R$99/ano para manter o domínio e o site no ar, sem alterações inclusas.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="what" aria-labelledby="what-title">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">O que é</p>
+            <h2 id="what-title">O essencial, bem apresentado.</h2>
+          </div>
+          <p class="section-intro">Um site de uma página feito para pequenos negócios locais. Seus clientes encontram as principais informações em um só lugar e chegam ao contato sem complicação.</p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature">
+            <span class="feature-num">01</span>
+            <h3>Uma página</h3>
+            <p>Topo, apresentação curta, serviços, fotos, localização, horário e contatos.</p>
+          </article>
+          <article class="feature">
+            <span class="feature-num">02</span>
+            <h3>Feito para celular</h3>
+            <p>Uma página responsiva para funcionar bem no celular e também no computador.</p>
+          </article>
+          <article class="feature">
+            <span class="feature-num">03</span>
+            <h3>Endereço próprio</h3>
+            <p>Domínio .com.br registrado no CPF ou CNPJ do seu negócio.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="includes-title">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">O pacote</p>
+            <h2 id="includes-title">O que entra no Site Essencial.</h2>
+          </div>
+          <p class="section-intro">A estrutura é objetiva para entregar uma presença profissional sem transformar o projeto em um sistema complexo.</p>
+        </div>
+
+        <div class="lists-grid">
+          <article class="list-card">
+            <h3>Inclui</h3>
+            <ul class="check-list">
+              <li>1 página com topo e apresentação curta</li>
+              <li>Até 8 serviços, com preço opcional</li>
+              <li>Até 12 fotos do próprio negócio</li>
+              <li>Mapa, endereço e horário de atendimento</li>
+              <li>Botão de WhatsApp e links das redes sociais</li>
+              <li>SSL, título, descrição e favicon</li>
+              <li>Domínio .com.br no CPF ou CNPJ do cliente</li>
+              <li>Primeiro ano do domínio e do site no ar</li>
+              <li>1 rodada de ajustes antes da publicação</li>
+            </ul>
+          </article>
+
+          <article class="list-card alt">
+            <h3>Não inclui</h3>
+            <ul class="check-list">
+              <li>Loja virtual</li>
+              <li>Sistema de agendamento</li>
+              <li>Login ou área restrita</li>
+              <li>Blog ou páginas adicionais</li>
+              <li>Criação de logo</li>
+              <li>Produção de fotos</li>
+              <li>Textos escritos do zero</li>
+              <li>Anúncios</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="process" aria-labelledby="process-title">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Como funciona</p>
+            <h2 id="process-title">Você vê antes de pagar.</h2>
+          </div>
+          <p class="section-intro">A prévia só é montada depois que você responde no direct. Ela usa as informações públicas do Instagram e do perfil do Google do seu negócio.</p>
+        </div>
+
+        <ol class="steps">
+          <li class="step">
+            <h3>Conversa no direct</h3>
+            <p>Você chama ou responde e informa o perfil do seu negócio.</p>
+          </li>
+          <li class="step">
+            <h3>Prévia por 7 dias</h3>
+            <p>Montamos uma versão com marca d’água, sem domínio e fora dos resultados de busca.</p>
+          </li>
+          <li class="step">
+            <h3>Aprovação e Pix</h3>
+            <p>Se gostar, você paga por Pix, confirma serviços e preços e autoriza o uso das fotos.</p>
+          </li>
+          <li class="step">
+            <h3>Ajuste e publicação</h3>
+            <p>Você tem 1 rodada de ajustes. Depois, o site é publicado no seu domínio.</p>
+          </li>
+        </ol>
+
+        <div class="preview-note">
+          <strong>Sobre a prévia</strong>
+          <p>Disponível para negócio ativo, com fotos próprias no Instagram. Usamos somente fotos postadas pelo próprio negócio — nunca fotos de clientes ou avaliadores do Google, nem rostos de pessoas que não sejam da equipe.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="examples" aria-labelledby="examples-title">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Exemplos</p>
+            <h2 id="examples-title">Uma estrutura, diferentes negócios.</h2>
+          </div>
+          <p class="section-intro">As composições abaixo são demonstrações fictícias da estrutura visual. Não representam clientes, projetos publicados ou resultados reais.</p>
+        </div>
+
+        <div class="examples-grid">
+          <article class="example">
+            <p class="example-label">Exemplo fictício · negócio de beleza</p>
+            <div class="mockup" aria-label="Demonstração abstrata fictícia de site para negócio de beleza">
+              <div class="mock-nav">
+                <span class="mock-logo"></span>
+                <span class="mock-menu" aria-hidden="true"><i></i><i></i><i></i></span>
+              </div>
+              <div class="mock-title">Seu cuidado em um só lugar</div>
+              <div class="mock-line"></div>
+              <div class="mock-line short"></div>
+              <div class="mock-button"></div>
+              <div class="mock-tiles" aria-hidden="true"><div class="mock-tile"></div><div class="mock-tile"></div><div class="mock-tile"></div></div>
+            </div>
+          </article>
+
+          <article class="example">
+            <p class="example-label">Exemplo fictício · doceria</p>
+            <div class="mockup dark" aria-label="Demonstração abstrata fictícia de site para doceria">
+              <div class="mock-nav">
+                <span class="mock-logo"></span>
+                <span class="mock-menu" aria-hidden="true"><i></i><i></i><i></i></span>
+              </div>
+              <div class="mock-title">Feito com cuidado</div>
+              <div class="mock-line"></div>
+              <div class="mock-line short"></div>
+              <div class="mock-button"></div>
+              <div class="mock-tiles" aria-hidden="true"><div class="mock-tile"></div><div class="mock-tile"></div><div class="mock-tile"></div></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="price-section" aria-labelledby="price-title">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Investimento</p>
+            <h2 id="price-title">Preço claro, sem surpresa.</h2>
+          </div>
+          <p class="section-intro">O Site Essencial é pago por Pix. A renovação anual mantém o domínio e o site no ar; alterações são contratadas separadamente.</p>
+        </div>
+
+        <div class="offer">
+          <div class="offer-main">
+            <span class="price-label">Pagamento único</span>
+            <div class="price"><small>R$</small>297</div>
+            <p>Domínio .com.br e primeiro ano do site no ar inclusos.</p>
+            <p class="offer-renewal"><strong>Depois do 1º ano:</strong> R$99/ano para manter domínio e site no ar, sem alterações inclusas.</p>
+            <a class="button" href="https://ig.me/m/atelie.sites" rel="noopener noreferrer">Chame no direct</a>
+          </div>
+
+          <div class="offer-options">
+            <h3>Alterações depois de publicar</h3>
+            <p>Antes da publicação, 1 rodada de ajustes já está incluída. Depois, você escolhe quando precisar:</p>
+            <div class="option-list">
+              <div class="option"><span>Alteração avulsa</span><strong>R$60</strong></div>
+              <div class="option"><span>Cuidamos do site · mensal</span><strong>R$29/mês</strong></div>
+              <div class="option"><span>Cuidamos do site · anual</span><strong>R$250/ano</strong></div>
+            </div>
+            <p class="option-note">“Cuidamos do site” inclui uma lista de alterações simples por mês.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="faq-title">
+      <div class="wrap faq-grid">
+        <div class="faq-title">
+          <p class="section-kicker">Dúvidas</p>
+          <h2 id="faq-title">Antes de chamar.</h2>
+          <p>As respostas principais sobre prévia, pagamento, domínio e alterações.</p>
+        </div>
+
+        <div>
+          <details>
+            <summary>Preciso mandar tudo para receber a prévia?</summary>
+            <p>Não. Depois que você responder no direct, a prévia é montada com o que já está público no Instagram e no perfil do Google do negócio. Antes da publicação, você confirma serviços e preços e autoriza o uso das fotos.</p>
+          </details>
+          <details>
+            <summary>A prévia fica publicada?</summary>
+            <p>Ela fica no ar por 7 dias, com marca d’água “prévia”, sem domínio próprio e configurada para não aparecer nos resultados de busca.</p>
+          </details>
+          <details>
+            <summary>O pagamento é mensal?</summary>
+            <p>Não. O Site Essencial custa R$297, pagamento único. Depois do primeiro ano, a renovação é de R$99 por ano para manter domínio e site no ar, sem alterações inclusas.</p>
+          </details>
+          <details>
+            <summary>Como é feito o pagamento?</summary>
+            <p>Por enquanto, o pagamento é por Pix.</p>
+          </details>
+          <details>
+            <summary>O domínio fica em nome de quem?</summary>
+            <p>O domínio .com.br fica registrado no CPF ou CNPJ do cliente.</p>
+          </details>
+          <details>
+            <summary>Posso pedir mudanças?</summary>
+            <p>Antes de publicar, está incluída 1 rodada de ajustes. Depois, a alteração avulsa custa R$60, ou você pode contratar “Cuidamos do site” por R$29/mês ou R$250/ano, com uma lista de alterações simples por mês.</p>
+          </details>
+          <details>
+            <summary>Tem loja ou agendamento?</summary>
+            <p>Não. Loja, agendamento, login, blog e páginas extras não fazem parte do Site Essencial.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta" aria-labelledby="cta-title">
+      <div class="wrap final-card">
+        <h2 id="cta-title">Quer ver como o seu site ficaria?</h2>
+        <p>Chame no direct com o perfil do seu negócio. A prévia é montada depois da sua resposta.</p>
+        <a class="button" href="https://ig.me/m/atelie.sites" rel="noopener noreferrer">Chame no direct</a>
+        <p class="final-renewal">R$297, pagamento único. Depois do 1º ano, R$99/ano.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <span>Ateliê de Sites · Site Essencial</span>
+      <a href="https://www.instagram.com/atelie.sites/" rel="noopener noreferrer">@atelie.sites</a>
+    </div>
+  </footer>
+</body>
+</html>
